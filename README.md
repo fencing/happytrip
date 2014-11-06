@@ -1,2 +1,2 @@
-happytrip
+HappyTrip is a web app which .....
 =========
