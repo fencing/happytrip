@@ -1,5 +1,5 @@
-HappyTrip is a web app which .....
-前端：html、css、js、bootstrap
+<head>HappyTrip</head> is a web app which .....
+<p>前端：html、css、js、bootstrap</p>
 后台：php
 数据库：mysql
 分8个模块
