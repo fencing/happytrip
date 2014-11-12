@@ -115,10 +115,10 @@ ini_set('date.timezone','Asia/Shanghai');
 				$duser		= $_POST["duser"];
 				
 				$sql = 	"INSERT INTO travel ".
-						"(id,tripname, kind ,viewname,place,placecity,timestart,timeend,cost,member,comment,did,duser,addtime)".
+						"(id,tripname, kind ,viewname,place,placecity,timestart,timeend,cost,member,comment,did,duser,addtime,mlist,mnum)".
 						"VALUES ".
 						"(null,'{$tripname}','{$kind}','{$viewname}','{$place}','{$placecity}',".
-						"'${timestart}','{$timeend}',{$cost},'{$member}','{$comment}',{$did},'{$duser}',{$addtime})";
+						"'${timestart}','{$timeend}',{$cost},'{$member}','{$comment}',{$did},'{$duser}',{$addtime},{$did},1)";
 																	
 				
 				
@@ -224,7 +224,20 @@ ini_set('date.timezone','Asia/Shanghai');
 				}
 
 			break;			
+			case "f2addtoteam": 
+			$id 	= $_POST["id"];
+			$joinid = $_POST["joinid"];
+			echo $id ;
+			echo "\n" ;
+			echo $joinid ;
+			$sql="update travel set mnum=mnum+1,mlist=CONCAT(mlist,',{$joinid}') where id={$id}";
+			$retval = mysql_query($sql,$link);
+			$id = mysql_insert_id($link);
 			
+			
+			
+			
+			break;	
 			
 			
 			case "f3": 
