@@ -1,7 +1,9 @@
 <head>HappyTrip</head> is a web app which .....
-<p>前端：html、css、js、bootstrap</p>
-后台：php
-数据库：mysql
+<ul>
+<li>前端：html、css、js、bootstrap</li>
+<li>后台：php</li>
+<li>数据库：mysql</li>
+</ul>
 分8个模块
 1旅游景点
 2旅游招友
