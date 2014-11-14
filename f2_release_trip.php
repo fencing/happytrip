@@ -6,25 +6,21 @@
 						define("TO_NEWPAGE","Location:f2_release_trip.html");
 						$st	="<div class='container' style='width: 800px'>".
 							"<div class='jumbotron'>".
-
 							"<div>发布者:{duser} &nbsp&nbsp 时间：{addtime}</div>".
 							"<table align='center' border='1' width='600'>".
 							"<caption >{tripname} </caption>".
-						
 							"<tr>".
 							"<TD width='100' >类型</TD>".
 							"<td width='300' >{kind}   </td>".
 							"<TD width='100'   >景点</TD>".
 							"<td width='300' >{viewname}   </td>".
 							"</tr> ".
-
 							"<tr>".
 		"<TD   width='100'>地点省</TD>".
 			"<td width='300'> {place} </td>".
 	"<TD   width='100'>地点市</TD>".
 	"<td width='300'>    {placecity}  </td>".
 	"</tr> ".
-
 	"<tr>".
 	"<TD   width='100'>开始时间</TD>".
 	"<td width='300'>     {timestart}   </td>".
@@ -42,7 +38,6 @@
 	"<tr>".
 	"<TD   width='100'>说明</TD>".
 	"<td >     {comment}  </td>".
-
 	"</tr>". 
 							"</table>".
 							"<form  action='action.php?action=f2addtoteam' method='post'>".
@@ -120,13 +115,25 @@
 						$fp=fopen(F_MENU,"r") ;
 						$str_menu=fread($fp,filesize(F_MENU));
 						$str=str_replace("{REPLACE_menu}",$str_menu,$str);
+						if($_SESSION["id"]=="")
+						{
+							$str_state="<div style='float:right'>".
+							"<a href='f0_login.php'   >登录</a>".
+							"<a href='f0_register.php' >注册</a></div>";
+						}
+						else
+						{
+
+						$str_state="<div style='float:right'>{duser}</div>";
+						$str_state=str_replace("{duser}",$_SESSION['username'],$str_state);
+						}
+						$str=str_replace("{REPLACE_state}",$str_state,$str);
 						fclose($fp);
 						
 						
 						$str=str_replace("{REPLACE_did}",$_SESSION['id'],$str);
 						$str=str_replace("{REPLACE_duser}",$_SESSION['username'],$str);
 						if($_SESSION["search"]==1)
-						
 						{	
 							$hit="搜索";
 							$hit=$hit.$_SESSION['keyword'];
