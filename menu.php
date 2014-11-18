@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿
+=======
+
+>>>>>>> 4fd4897a55d97e7d556cf716e9b7ed4c1ee87992
 <ul class="nav nav-list">
 
 <li class="active" >
@@ -50,7 +54,11 @@
 </li>
 
 <li class="active">
+<<<<<<< HEAD
 	<a   href="f3_release_share.php">
+=======
+	<a   href="f3_release_sence.php">
+>>>>>>> 4fd4897a55d97e7d556cf716e9b7ed4c1ee87992
 		<img class="app-icon" width="32" height="32" src="img/menu8.jpg" />
 		<span class="app-title">旅游分享</span>
 	</a>

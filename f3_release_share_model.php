@@ -1,3 +1,4 @@
+
 ﻿<!DOCTYPE html>
 <html>
 <head>
@@ -134,7 +135,9 @@
 
 <tr>
 	<TD align="right" >开始分享我的趣事！</TD>
-	<td><textarea name="content" style=" height:100%; width:400px;" rows="6" cols="80"></textarea></td>
+
+	<td><textarea name="content" style=" height:100%;" rows="6" cols="80"></textarea></td>
+
 </tr> 
 
 </table>
