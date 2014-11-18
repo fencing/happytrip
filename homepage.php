@@ -44,9 +44,9 @@
 				date_default_timezone_set("Asia/Shanghai");
 						require("dbconfig.php");
 						$link = @mysql_connect(HOST,USER,PASS) or die("数据库连接失败！");
-						mysql_select_db(DBNAME,$link);
+		mysql_select_db(DBNAME,$link);
 						
-						$sql = "select * from travel order by addtime desc";
+			$sql = "select * from travel order by addtime desc";
 						$result = mysql_query($sql,$link);
 						
 						while($row = mysql_fetch_assoc($result)){
@@ -67,8 +67,7 @@
 							echo "<th >活动</th>";
 							echo "<td>{$row['activity']}</td>";
 							echo "</tr>";
-
-							
+						
 							echo "<tr>";
 							echo "<th>地点</th>";
 							echo "<td>{$row['place']}</td>";

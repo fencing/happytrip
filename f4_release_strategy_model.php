@@ -22,11 +22,11 @@
 		<div class="jumbotron" >
 
 			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" >
-				搜索旅游团队
+				搜索旅游攻略
 			</button>
 
 			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_dis" style="float:right">
-				发布我的团队
+				发布我的攻略
 			</button>
 
 			<!-- 模态框（Modal） -->
@@ -41,8 +41,8 @@
                   &times;
             </button>
             <h4 class="modal-title" id="myModalLabel">
-              搜索旅游团队
-			  <TD align="right" color:red >旅团名称</TD>
+              搜索旅游攻略
+			  <TD align="right" color:red >景点名称</TD>
 	<td><input type="text" name="tripname"   ></td>
             </h4>
          </div>
@@ -53,7 +53,7 @@
 				
 				
 			<table  border="0" align="center" > 
-<tr>
+<!--<tr>
 	<TD align="right" >类型</TD>
 	<td><input type="text" name="kind"   ></td>
 	<TD align="right" >景点</TD>
@@ -84,7 +84,7 @@
 <tr>
 	<TD align="right" >说明</TD>
 	<td><input type="text" name="comment"  ></td>
-</tr> 
+</tr> -->
 
 
 </table>
@@ -117,8 +117,8 @@
                   &times;
             </button>
             <h4 class="modal-title" id="myModalLabel">
-              发布我的团队	
-			  <TD align="right" color=red >旅团名称</TD>
+              发布我的旅游攻略	
+			  <TD align="right" color=red >景点名称</TD>
 	<td><input type="text" name="tripname"   ></td>
             </h4>
          </div>
