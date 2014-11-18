@@ -1,4 +1,3 @@
-
 ﻿<?php
 						@session_start();
 						define("F_MODEL","f3_release_share_model.php");
@@ -8,7 +7,6 @@
 						$st	="<div class='container' style='width: 800px'>".
 							"<div class='jumbotron'>".
 								"<div>发布者:{postuser} &nbsp&nbsp 时间：{time}<br>{tripname}</div>".
-
 									"<table align='center' border='1' width='600'>".
 										"<tr>".
 											"<TD width='100' >省</TD>".
@@ -34,7 +32,6 @@
 						$link = @mysql_connect(HOST,USER,PASS) or die("数据库连接失败！");
 						mysql_select_db(DBNAME,$link);
 
-
 						if($_SESSION["search"]==1){	
 							$sql=$_SESSION["sqlsearch"];
 						}
@@ -46,7 +43,6 @@
 						$result = mysql_query($sql,$link);
 
 						while($row = mysql_fetch_assoc($result)){
-
 							
 							$duser=$row['postuser'];
 							$tripname=$row['tripname'];
@@ -65,7 +61,6 @@
 							$str=str_replace("{place}",$place,$str);
 							$str=str_replace("{type}",$type,$str);
 							$str=str_replace("{content}",$content,$str);
-
 
 							$sum=$sum.$str;
 						}
@@ -115,5 +110,5 @@
 						fclose($handle);
 
 						header(TO_NEWPAGE);
-					
+						
 ?>

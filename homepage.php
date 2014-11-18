@@ -1,9 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
  <META http-equiv="content-type" content="text/html; charset=UTF-8"> 
  
+	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-theme.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
 	<link href="css/kelikeli.css" rel="stylesheet" media="screen">
 	<script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.min.js"></script>
@@ -14,43 +19,39 @@
 
 </head>
 <body>
-
-<div id="container" >
-
-<div id="header" >
-<h1 >kelikeli,快乐旅行^_^</h1>
+<div class="container-fluid">
+	<div class="row-fluid" style="background-image: url('img/title.jpg');">
+		<div class="span11" ></div>
+		<div class="span1">
+		{REPLACE_state}
+		</div>
+			<br><br><br><br><br><br>
+	</div>
+	
+<div class="row-fluid"> <div class="span1"></div>
+<div class="span2">
+<?php include "menu.php"; ?>
 </div>
-
-<div class="left" >
-	<?php include "menu.php"; ?>
-</div>
-<div class="header">
-</div>
-<div class='content'>
-<div class="container"  >
-
-   <div class="jumbotron">
-      <h1>欢迎登陆页面！</h1>
-      <p>这是一个超大屏幕（Jumbotron）的实例。</p>
-      <p><a class="btn btn-primary btn-lg" role="button">
-         学习更多</a>
-      </p>
-   </div>
-</div>
-</div>
-
-
+<div class="span9">
+			<div class="container"  >
+			   <div class="jumbotron">
+				  <h1>欢迎登陆页面！</h1>
+				  <p>这是一个超大屏幕（Jumbotron）的实例。</p>
+				  <p><a class="btn btn-primary btn-lg" role="button">
+					 学习更多</a>
+				  </p>
+			   </div>
+			</div>
 				<?php
 				date_default_timezone_set("Asia/Shanghai");
 						require("dbconfig.php");
 						$link = @mysql_connect(HOST,USER,PASS) or die("数据库连接失败！");
-		mysql_select_db(DBNAME,$link);
+						mysql_select_db(DBNAME,$link);
 						
-			$sql = "select * from travel order by addtime desc";
+						$sql = "select * from travel order by addtime desc";
 						$result = mysql_query($sql,$link);
 						
 						while($row = mysql_fetch_assoc($result)){
-							echo "<div class='content'>";
 							echo "<div class='container'>";
 							
 							echo "<div class='jumbotron'>";
@@ -67,7 +68,8 @@
 							echo "<th >活动</th>";
 							echo "<td>{$row['activity']}</td>";
 							echo "</tr>";
-						
+
+							
 							echo "<tr>";
 							echo "<th>地点</th>";
 							echo "<td>{$row['place']}</td>";
@@ -108,7 +110,6 @@
 							echo "</table>";
 							echo "</div>";
 							echo "</div>";
-							echo "</div>";
 
 							
 						}
@@ -119,69 +120,75 @@
 
 
 						while($row = mysql_fetch_assoc($result)){
-						echo "<div class='content'>";
+						echo "<div class='container'>";
+						echo "<div class='jumbotron'>";
 							echo "<table align='center' border='1' width='400'>";
-							echo "<caption id='hello'>分享趣事</caption>";
 							
-							echo "<tr>";
-							echo "<th >".date("Y-m-d   H:i:s ",$row['addtime'])."</th>";
-							echo "<th>{$row['duser']}</th>";
-							echo "</tr>";
-							
+								echo "<caption id='hello'>分享趣事</caption>";
+								
+								echo "<tr>";
+								echo "<th >".date("Y-m-d   H:i:s ",$row['addtime'])."</th>";
+								echo "<th>{$row['duser']}</th>";
+								echo "</tr>";
+							echo "</table>";
 							echo "<div class = 'a-feed'>";
 							echo "<table align='center' border='1' width='400'>";
 							
-							echo "<tr>";
-							echo "<th> 主题</th>";
-							echo "<td>{$row['topic']}</td>";
-							echo "</tr>";
+								echo "<tr>";
+								echo "<th> 主题</th>";
+								echo "<td>{$row['topic']}</td>";
+								echo "</tr>";
 
-							
-							echo "<tr>";
-							echo "<th>内容</th>";
-							echo "<td>{$row['context']}</td>";
-							echo "</tr>";
+								
+								echo "<tr>";
+								echo "<th>内容</th>";
+								echo "<td>{$row['context']}</td>";
+								echo "</tr>";
 							
 							echo "</table>";
 							echo "</div>";
-							echo "</div>";
+						echo "</div>";
+						echo "</div>";
 						}
 
 						$sql = "select * from strategy order by addtime desc";
 						$result = mysql_query($sql,$link);
 						
 						while($row = mysql_fetch_assoc($result)){
-						echo "<div class='content'>";
+						echo "<div class='container'>";
+							echo "<div class='jumbotron'>";
+								echo "<div class = 'a-feed'>";
+									echo "<table align='center' border='1' width='400'>";
+										echo "<caption id='hello'>撰写攻略</caption>";
+										
+										echo "<tr>";
+										echo "<th >".date("Y-m-d   H:i:s ",$row['addtime'])."</th>";
+										echo "<th>{$row['duser']}</th>";
+										echo "</tr>";
+										
+										echo "<tr>";
+										echo "<th> 主题</th>";
+										echo "<td>{$row['topic']}</td>";
+										echo "</tr>";
 
-							echo "<div class = 'a-feed'>";
-							echo "<table align='center' border='1' width='400'>";
-							echo "<caption id='hello'>撰写攻略</caption>";
-							
-							echo "<tr>";
-							echo "<th >".date("Y-m-d   H:i:s ",$row['addtime'])."</th>";
-							echo "<th>{$row['duser']}</th>";
-							echo "</tr>";
-							
-							echo "<tr>";
-							echo "<th> 主题</th>";
-							echo "<td>{$row['topic']}</td>";
-							echo "</tr>";
-
-							
-							echo "<tr>";
-							echo "<th>内容</th>";
-							echo "<td>{$row['context']}</td>";
-							echo "</tr>";
-							
-							echo "</table>";
+										
+										echo "<tr>";
+										echo "<th>内容</th>";
+										echo "<td>{$row['context']}</td>";
+										echo "</tr>";
+										
+									echo "</table>";
+								echo "</div>";
 							echo "</div>";
-							echo "</div>";
-							
+						echo "</div>";
 						}
 
 						mysql_free_result($result);
 						mysql_close($link);
 				?>
+
+</div>
+</div>
 </div>
 </body>
 </html>

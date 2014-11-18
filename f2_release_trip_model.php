@@ -18,25 +18,28 @@
 	<div class="row-fluid" style="background-image: url('img/title.jpg');">
 		<div class="span11" ></div>
 		<div class="span1">
+		
 			{REPLACE_state}
 		</div>
 			<br><br><br><br><br><br>
 	</div>
 	
-<div class="row-fluid"> 
-<div class="span3">
+<div class="row-fluid">
+<div class="span1"></div>
+<div class="span2">
 {REPLACE_menu} 
 </div>
 <div class="span9">
 	<div class="row-fluid">
-		<div class="span12>
-			<div class="hero-unit">"
+		<div class="span12">
+			<div class="container">
 				<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" >
 					搜索旅游团队
 				</button>
 				<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_dis" >
 					发布我的团队
 				</button>
+			</div>
 				<!-- 模态框（Modal） -->
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
 					aria-labelledby="myModalLabel" aria-hidden="true">
@@ -175,9 +178,9 @@
 				</div>
 			</div>
 		</div>
+		{REPLACE_hint}
+		{REPLACE_content}
 	</div>
-{REPLACE_hint}
-{REPLACE_content}
 </div>
 </div>
 </div>
