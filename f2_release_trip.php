@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 						@session_start();
 						define("F_MODEL","f2_release_trip_model.php");
 						define("F_NEWPAGE","f2_release_trip.html");
@@ -117,7 +117,8 @@
 						$str=str_replace("{REPLACE_menu}",$str_menu,$str);
 						if($_SESSION["id"]=="")
 						{
-							$str_state="<div style='float:right'>".
+							$str_state="<div class=btn btn-inverse btn-large>".
+							//"<button class=\"btn btn-inverse btn-large\" type=\"button\">".
 							"<a href='f0_login.php'   >登录</a>".
 							"<a href='f0_register.php' >注册</a></div>";
 						}

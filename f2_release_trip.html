@@ -1,277 +1,266 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
  <META http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-	<link href="css/kelikeli.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-theme.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+		<link href="css/kelikeli.css" rel="stylesheet" media="screen">
      <script  src="js/jquery.min.js"></script>
 </head>
 <body>
 
 <script  src="js/bootstrap.min.js"></script>    
-<div id="container" >
-<div id="header" ><h1 >kelikeli,快乐旅行^_^</h1></div>
-<div class="left" > ﻿
-<ul >
+<div class="container-fluid">
+	<div class="row-fluid" style="background-image: url('img/title.jpg');">
+		<div class="span11" ></div>
+		<div class="span1">
+			<div style='float:right'>happy</div>
+		</div>
+			<br><br><br><br><br><br>
+	</div>
+	
+<div class="row-fluid"> 
+<div class="span3">
+﻿
+<ul class="nav nav-list">
 
-<li  >
+<li class="active" >
 	<a   href="homepage.php">
-		<img class="app-icon" width="32" height="32" src="http://a.xnimg.cn/a.gif"  />
+		<img class="app-icon" width="32" height="32" src="img/menu1.jpg"  />
 		<span class="app-title">首页</span>
 	</a>
 </li>
-<li >
+<li class="active">
 	<a   href="f1_mytrip.php">
-		<img class="app-icon" width="32" height="32" src="http://a.xnimg.cn/a.gif" />
+		<img class="app-icon" width="32" height="32" src="img/menu2.jpg" />
 		<span class="app-title">我的旅游</span>
 	</a>
 </li>
 
-<li >
+<li class="active">
 	<a   href="f7_hotplaces.php">
-		<img class="app-icon" width="32" height="32" src="http://a.xnimg.cn/a.gif" />
+		<img class="app-icon" width="32" height="32" src="img/menu3.jpg" />
 		<span class="app-title">旅游景区</span>
 	</a>
 </li>
 
-<li >
+<li class="active">
 	<a   href="f2_release_trip.php">
-		<img class="app-icon" width="32" height="32" src="http://a.xnimg.cn/a.gif" />
+		<img class="app-icon" width="32" height="32" src="img/menu4.jpg" />
 		<span class="app-title">旅游招友</span>
 	</a>
 </li>
 
-<li >
+<li class="active">
 	<a   href="f8_trip_group.php">
-		<img class="app-icon" width="32" height="32" src="http://a.xnimg.cn/a.gif" />
+		<img class="app-icon" width="32" height="32" src="img/menu5.jpg" />
 		<span class="app-title">旅游组团</span>
 	</a>
 </li>
 
-<li >
+<li class="active">
 	<a   href="f3_release_sence.php">
-		<img class="app-icon" width="32" height="32" src="http://a.xnimg.cn/a.gif" />
+		<img class="app-icon" width="32" height="32" src="img/menu6.jpg" />
 		<span class="app-title">旅游计划</span>
 	</a>
 </li>
 
-<li >
+<li class="active">
 	<a   href="f3_release_sence.php">
-		<img class="app-icon" width="32" height="32" src="http://a.xnimg.cn/a.gif" />
+		<img class="app-icon" width="32" height="32" src="img/menu7.jpg" />
 		<span class="app-title">旅游进展</span>
 	</a>
 </li>
 
-<li >
-	<a   href="f3_release_sence.php">
-		<img class="app-icon" width="32" height="32" src="http://a.xnimg.cn/a.gif" />
+<li class="active">
+	<a   href="f3_release_share.php">
+		<img class="app-icon" width="32" height="32" src="img/menu8.jpg" />
 		<span class="app-title">旅游分享</span>
 	</a>
 </li>
 
 
-<li >
+<li class="active">
 	<a   href="f4_release_strategy.php">
-		<img class="app-icon" width="32" height="32" src="http://a.xnimg.cn/a.gif" />
+		<img class="app-icon" width="32" height="32" src="img/menu9.jpg" />
 		<span class="app-title">旅游攻略</span>
 	</a>
 </li>
 
-<li >
+<li class="active">
 	<a   href="f5_friend.php">
-		<img class="app-icon" width="32" height="32" src="http://a.xnimg.cn/a.gif" />
+		<img class="app-icon" width="32" height="32" src="img/menu10.jpg" />
 		<span class="app-title">旅游交友</span>
 	</a>
 </li>
 
-<li >
+<li class="active">
 	<a   href="<?php @session_start(); echo 'f6_setting.php?id='.$_SESSION['id'] ?>"> 
-		<img class="app-icon" width="32" height="32" src="http://a.xnimg.cn/a.gif" />
+		<img class="app-icon" width="32" height="32" src="img/menu11.jpg" />
 		<span class="app-title">设置</span>
 	</a>
 </li>
 
 </ul>
- </div>
-<div class="header"></div>
-
-
-<div class='content'>
-
-	<div class="container" style="width: 800px">
-
-		<div class="jumbotron" >
-
-			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" >
-				搜索旅游团队
-			</button>
-
-			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_dis" style="float:right">
-				发布我的团队
-			</button>
-
-			<!-- 模态框（Modal） -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
-   aria-labelledby="myModalLabel" aria-hidden="true">
-   <div class="modal-dialog">
-      <div class="modal-content">
-	  <form action="action.php?action=fs2" method="post">
-         <div class="modal-header">
-            <button type="button" class="close" 
-               data-dismiss="modal" aria-hidden="true">
-                  &times;
-            </button>
-            <h4 class="modal-title" id="myModalLabel">
-              搜索旅游团队
-			  <TD align="right" color:red >旅团名称</TD>
-	<td><input type="text" name="tripname"   ></td>
-            </h4>
-         </div>
-         <div class="modal-body">
-            
-				<input type="hidden" name="did"		 value="1" />
-				<input type="hidden" name="duser" 	 value="happy" />
-				
-				
-			<table  border="0" align="center" > 
-<tr>
-	<TD align="right" >类型</TD>
-	<td><input type="text" name="kind"   ></td>
-	<TD align="right" >景点</TD>
-	<td><input type="text" name="viewname"   ></td>
-</tr> 
-
-<tr>
-	<TD align="right" >地点省</TD>
-	<td><input type="text" name="place" ></td>
-	<TD align="right" >地点市</TD>
-	<td><input type="text" name="placecity"  ></td>
-</tr> 
-
-<tr>
-	<TD align="right" >开始时间</TD>
-	<td><input type="text" name="timestart"   ></td>
-	<TD align="right" >开始时间</TD>
-	<td><input type="text" name="timeend"  ></td>
-</tr> 
  
-<tr>
-	<TD align="right" >花费</TD>
-	<td><input type="text" name="cost"   ></td>
-	<TD align="right" >成员</TD>
-	<td><input type="text" name="member"  ></td>
-</tr> 
-
-<tr>
-	<TD align="right" >说明</TD>
-	<td><input type="text" name="comment"  ></td>
-</tr> 
-
-
-</table>
-
-         </div>
-         <div class="modal-footer">
-            <button type="button" class="btn btn-default" 
-               data-dismiss="modal">关闭
-            </button>
-            <button type="submit" name="submit" class="btn btn-primary">
-               提交
-            </button>
-
-         </div>
-		 </form>
-		 
-      </div>
 </div>
-</div>
+<div class="span9">
+	<div class="row-fluid">
+		<div class="span12>
+			<div class="hero-unit">"
+				<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" >
+					搜索旅游团队
+				</button>
+				<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_dis" >
+					发布我的团队
+				</button>
+				<!-- 模态框（Modal） -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+					aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<form action="action.php?action=fs2" method="post">
+								<div class="modal-header">
+									<button type="button" class="close" 
+									   data-dismiss="modal" aria-hidden="true">
+										  &times;
+									</button>
+									<h4 class="modal-title" id="myModalLabel">搜索旅游团队
+										<TD align="right" color:red >旅团名称</TD>
+										<td><input type="text" name="tripname"   ></td>
+									</h4>
+								</div>
+								<div class="modal-body">
+									<input type="hidden" name="did"		 value="1" />
+									<input type="hidden" name="duser" 	 value="happy" />
+									<table  border="0" align="center" > 
+										<tr>
+											<TD align="right" >类型</TD>
+											<td><input type="text" name="kind"   ></td>
+											<TD align="right" >景点</TD>
+											<td><input type="text" name="viewname"   ></td>
+										</tr> 
+
+										<tr>
+											<TD align="right" >地点省</TD>
+											<td><input type="text" name="place" ></td>
+											<TD align="right" >地点市</TD>
+											<td><input type="text" name="placecity"  ></td>
+										</tr> 
+
+										<tr>
+											<TD align="right" >开始时间</TD>
+											<td><input type="text" name="timestart"   ></td>
+											<TD align="right" >开始时间</TD>
+											<td><input type="text" name="timeend"  ></td>
+										</tr> 
+										 
+										<tr>
+											<TD align="right" >花费</TD>
+											<td><input type="text" name="cost"   ></td>
+											<TD align="right" >成员</TD>
+											<td><input type="text" name="member"  ></td>
+										</tr> 
+
+										<tr>
+											<TD align="right" >说明</TD>
+											<td><input type="text" name="comment"  ></td>
+										</tr> 
+
+									</table>
+
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" 
+									   data-dismiss="modal">关闭
+									</button>
+									<button type="submit" name="submit" class="btn btn-primary">
+									   提交
+									</button>	
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
 
 
-<div class="modal fade" id="myModal_dis" tabindex="-1" role="dialog" 
-   aria-labelledby="myModalLabel" aria-hidden="true">
-   <div class="modal-dialog">
-      <div class="modal-content">
-	  <form action="action.php?action=f2" method="post">
-         <div class="modal-header">
-            <button type="button" class="close" 
-               data-dismiss="modal" aria-hidden="true">
-                  &times;
-            </button>
-            <h4 class="modal-title" id="myModalLabel">
-              发布我的团队	
-			  <TD align="right" color=red >旅团名称</TD>
-	<td><input type="text" name="tripname"   ></td>
-            </h4>
-         </div>
-         <div class="modal-body">
-            
-				<input type="hidden" name="did"		 value="1" />
-				<input type="hidden" name="duser" 	 value="happy" />
-				
-				
-			<table  border="0" align="center" > 
-<tr>
-	<TD align="right" >类型</TD>
-	<td><input type="text" name="kind"   ></td>
-	<TD align="right" >景点</TD>
-	<td><input type="text" name="viewname"   ></td>
-</tr> 
+				<div class="modal fade" id="myModal_dis" tabindex="-1" role="dialog" 
+					aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<form action="action.php?action=f2" method="post">
+								<div class="modal-header">
+									<button type="button" class="close" 
+									   data-dismiss="modal" aria-hidden="true">
+										  &times;
+									</button>
+									<h4 class="modal-title" id="myModalLabel">发布我的团队	
+										<TD align="right" color=red >旅团名称</TD>
+										<td><input type="text" name="tripname"   ></td>
+									</h4>
+								</div>
+								<div class="modal-body">
+									<input type="hidden" name="did"		 value="1" />
+									<input type="hidden" name="duser" 	 value="happy" />
+									<table  border="0" align="center" > 
+										<tr>
+											<TD align="right" >类型</TD>
+											<td><input type="text" name="kind"   ></td>
+											<TD align="right" >景点</TD>
+											<td><input type="text" name="viewname"   ></td>
+										</tr> 
 
-<tr>
-	<TD align="right" >地点省</TD>
-	<td><input type="text" name="place" ></td>
-	<TD align="right" >地点市</TD>
-	<td><input type="text" name="placecity"  ></td>
-</tr> 
+										<tr>
+											<TD align="right" >地点省</TD>
+											<td><input type="text" name="place" ></td>
+											<TD align="right" >地点市</TD>
+											<td><input type="text" name="placecity"  ></td>
+										</tr> 
 
-<tr>
-	<TD align="right" >开始时间</TD>
-	<td><input type="text" name="timestart"   ></td>
-	<TD align="right" >结束时间</TD>
-	<td><input type="text" name="timeend"  ></td>
-</tr> 
- 
-<tr>
-	<TD align="right" >花费</TD>
-	<td><input type="text" name="cost"   ></td>
-	<TD align="right" >成员</TD>
-	<td><input type="text" name="member"  ></td>
-</tr> 
+										<tr>
+											<TD align="right" >开始时间</TD>
+											<td><input type="text" name="timestart"   ></td>
+											<TD align="right" >结束时间</TD>
+											<td><input type="text" name="timeend"  ></td>
+										</tr> 
+										 
+										<tr>
+											<TD align="right" >花费</TD>
+											<td><input type="text" name="cost"   ></td>
+											<TD align="right" >成员</TD>
+											<td><input type="text" name="member"  ></td>
+										</tr> 
 
-<tr>
-	<TD align="right" >说明</TD>
-	<td><input type="text" name="comment"  ></td>
-</tr> 
-<tr>
+										<tr>
+											<TD align="right" >说明</TD>
+											<td><input type="text" name="comment"  ></td>
+										</tr> 
+									</table>
 
-</table>
-
-         </div>
-         <div class="modal-footer">
-            <button type="button" class="btn btn-default" 
-               data-dismiss="modal">关闭
-            </button>
-            <button type="submit" name="submit" class="btn btn-primary">
-               提交
-            </button>
-
-         </div>
-		 </form>
-		 
-      </div>
-</div>
-</div>
-
-
-
-
-
-
-</div>
-
-</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" 
+									   data-dismiss="modal">关闭
+									</button>
+									<button type="submit" name="submit" class="btn btn-primary">
+									   提交
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 全部发布
-<div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-10   15:00:02 </div><table align='center' border='1' width='600'><caption >world </caption><tr><TD width='100' >类型</TD><td width='300' >fga   </td><TD width='100'   >景点</TD><td width='300' >gdsa   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'> sdagw </td><TD   width='100'>地点市</TD><td width='300'>    gsdg  </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>     egds   </td><TD  width='100' >开始时间</TD><td width='300'>     fgsd  </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     5   </td><TD  width='100' >成员</TD><td width='300'>     fsdag  </td></tr> <tr><TD   width='100'>说明</TD><td >     gsdgf  </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='66' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-05   14:25:10 </div><table align='center' border='1' width='600'><caption >hello </caption><tr><TD width='100' >类型</TD><td width='300' >hello   </td><TD width='100'   >景点</TD><td width='300' >hello   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'> hello </td><TD   width='100'>地点市</TD><td width='300'>    hello  </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>     hello   </td><TD  width='100' >开始时间</TD><td width='300'>       </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     3424   </td><TD  width='100' >成员</TD><td width='300'>       </td></tr> <tr><TD   width='100'>说明</TD><td >       </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='65' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-03   23:54:49 </div><table align='center' border='1' width='600'><caption >阿发但是 </caption><tr><TD width='100' >类型</TD><td width='300' >阿萨德撒   </td><TD width='100'   >景点</TD><td width='300' >阿斯蒂芬   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'> 倒萨 </td><TD   width='100'>地点市</TD><td width='300'>    发大水  </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>     萨芬   </td><TD  width='100' >开始时间</TD><td width='300'>     安上  </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     1   </td><TD  width='100' >成员</TD><td width='300'>     第三方  </td></tr> <tr><TD   width='100'>说明</TD><td >     色温  </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='64' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-03   23:53:30 </div><table align='center' border='1' width='600'><caption >5 </caption><tr><TD width='100' >类型</TD><td width='300' >3   </td><TD width='100'   >景点</TD><td width='300' >4   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'> 42 </td><TD   width='100'>地点市</TD><td width='300'>    523  </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>     5   </td><TD  width='100' >开始时间</TD><td width='300'>     24  </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     2   </td><TD  width='100' >成员</TD><td width='300'>     3  </td></tr> <tr><TD   width='100'>说明</TD><td >     5  </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='63' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-03   23:22:14 </div><table align='center' border='1' width='600'><caption >1 </caption><tr><TD width='100' >类型</TD><td width='300' >2   </td><TD width='100'   >景点</TD><td width='300' >3   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'> 4 </td><TD   width='100'>地点市</TD><td width='300'>    5  </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>     6   </td><TD  width='100' >开始时间</TD><td width='300'>     7  </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     9   </td><TD  width='100' >成员</TD><td width='300'>     0  </td></tr> <tr><TD   width='100'>说明</TD><td >     19  </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='62' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-03   22:56:41 </div><table align='center' border='1' width='600'><caption > 旅团名称 </caption><tr><TD width='100' >类型</TD><td width='300' >	 旅团名称   </td><TD width='100'   >景点</TD><td width='300' >	 旅团名称   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'> 	 旅团名称 </td><TD   width='100'>地点市</TD><td width='300'>    	 旅团名称  </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>     	 旅团名称   </td><TD  width='100' >开始时间</TD><td width='300'>     	 旅团名称  </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     4   </td><TD  width='100' >成员</TD><td width='300'>     	 旅团名称  </td></tr> <tr><TD   width='100'>说明</TD><td >     	 旅团名称  </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='61' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-03   08:44:54 </div><table align='center' border='1' width='600'><caption >fdsafsa </caption><tr><TD width='100' >类型</TD><td width='300' >   </td><TD width='100'   >景点</TD><td width='300' >   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'>  </td><TD   width='100'>地点市</TD><td width='300'>      </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>        </td><TD  width='100' >开始时间</TD><td width='300'>       </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     342   </td><TD  width='100' >成员</TD><td width='300'>       </td></tr> <tr><TD   width='100'>说明</TD><td >       </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='60' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-03   08:39:46 </div><table align='center' border='1' width='600'><caption >level6 </caption><tr><TD width='100' >类型</TD><td width='300' >调试   </td><TD width='100'   >景点</TD><td width='300' >   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'> 黑龙江 </td><TD   width='100'>地点市</TD><td width='300'>      </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>        </td><TD  width='100' >开始时间</TD><td width='300'>       </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     3   </td><TD  width='100' >成员</TD><td width='300'>       </td></tr> <tr><TD   width='100'>说明</TD><td >       </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='59' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-03   00:50:15 </div><table align='center' border='1' width='600'><caption > </caption><tr><TD width='100' >类型</TD><td width='300' >234   </td><TD width='100'   >景点</TD><td width='300' >trewr   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'>  </td><TD   width='100'>地点市</TD><td width='300'>      </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>     ffwe   </td><TD  width='100' >开始时间</TD><td width='300'>     ewf  </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     4535   </td><TD  width='100' >成员</TD><td width='300'>       </td></tr> <tr><TD   width='100'>说明</TD><td >       </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='57' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-03   00:24:55 </div><table align='center' border='1' width='600'><caption >level6 </caption><tr><TD width='100' >类型</TD><td width='300' >吃货   </td><TD width='100'   >景点</TD><td width='300' >重庆某地   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'> asdfsaf </td><TD   width='100'>地点市</TD><td width='300'>    111111111111  </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>     放假了。   </td><TD  width='100' >开始时间</TD><td width='300'>     开学了  </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     0   </td><TD  width='100' >成员</TD><td width='300'>     lkl fzq ty  </td></tr> <tr><TD   width='100'>说明</TD><td >     可以提交了  </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='47' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div>
+<div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-17   19:59:29 </div><table align='center' border='1' width='600'><caption > </caption><tr><TD width='100' >类型</TD><td width='300' >类型	   </td><TD width='100'   >景点</TD><td width='300' >   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'>  </td><TD   width='100'>地点市</TD><td width='300'>      </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>        </td><TD  width='100' >开始时间</TD><td width='300'>       </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     3244   </td><TD  width='100' >成员</TD><td width='300'>       </td></tr> <tr><TD   width='100'>说明</TD><td >       </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='67' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-10   15:00:02 </div><table align='center' border='1' width='600'><caption >world </caption><tr><TD width='100' >类型</TD><td width='300' >fga   </td><TD width='100'   >景点</TD><td width='300' >gdsa   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'> sdagw </td><TD   width='100'>地点市</TD><td width='300'>    gsdg  </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>     egds   </td><TD  width='100' >开始时间</TD><td width='300'>     fgsd  </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     5   </td><TD  width='100' >成员</TD><td width='300'>     fsdag  </td></tr> <tr><TD   width='100'>说明</TD><td >     gsdgf  </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='66' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-05   14:25:10 </div><table align='center' border='1' width='600'><caption >hello </caption><tr><TD width='100' >类型</TD><td width='300' >hello   </td><TD width='100'   >景点</TD><td width='300' >hello   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'> hello </td><TD   width='100'>地点市</TD><td width='300'>    hello  </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>     hello   </td><TD  width='100' >开始时间</TD><td width='300'>       </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     3424   </td><TD  width='100' >成员</TD><td width='300'>       </td></tr> <tr><TD   width='100'>说明</TD><td >       </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='65' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-03   23:54:49 </div><table align='center' border='1' width='600'><caption >é˜¿å‘ä½†æ˜¯ </caption><tr><TD width='100' >类型</TD><td width='300' >é˜¿è¨å¾·æ’’   </td><TD width='100'   >景点</TD><td width='300' >é˜¿æ–¯è’‚èŠ¬   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'> å€’è¨ </td><TD   width='100'>地点市</TD><td width='300'>    å‘å¤§æ°´  </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>     è¨èŠ¬   </td><TD  width='100' >开始时间</TD><td width='300'>     å®‰ä¸Š  </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     1   </td><TD  width='100' >成员</TD><td width='300'>     ç¬¬ä¸‰æ–¹  </td></tr> <tr><TD   width='100'>说明</TD><td >     è‰²æ¸©  </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='64' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-03   23:53:30 </div><table align='center' border='1' width='600'><caption >5 </caption><tr><TD width='100' >类型</TD><td width='300' >3   </td><TD width='100'   >景点</TD><td width='300' >4   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'> 42 </td><TD   width='100'>地点市</TD><td width='300'>    523  </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>     5   </td><TD  width='100' >开始时间</TD><td width='300'>     24  </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     2   </td><TD  width='100' >成员</TD><td width='300'>     3  </td></tr> <tr><TD   width='100'>说明</TD><td >     5  </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='63' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-03   23:22:14 </div><table align='center' border='1' width='600'><caption >1 </caption><tr><TD width='100' >类型</TD><td width='300' >2   </td><TD width='100'   >景点</TD><td width='300' >3   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'> 4 </td><TD   width='100'>地点市</TD><td width='300'>    5  </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>     6   </td><TD  width='100' >开始时间</TD><td width='300'>     7  </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     9   </td><TD  width='100' >成员</TD><td width='300'>     0  </td></tr> <tr><TD   width='100'>说明</TD><td >     19  </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='62' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-03   22:56:41 </div><table align='center' border='1' width='600'><caption > æ—…å›¢åç§° </caption><tr><TD width='100' >类型</TD><td width='300' >	 æ—…å›¢åç§°   </td><TD width='100'   >景点</TD><td width='300' >	 æ—…å›¢åç§°   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'> 	 æ—…å›¢åç§° </td><TD   width='100'>地点市</TD><td width='300'>    	 æ—…å›¢åç§°  </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>     	 æ—…å›¢åç§°   </td><TD  width='100' >开始时间</TD><td width='300'>     	 æ—…å›¢åç§°  </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     4   </td><TD  width='100' >成员</TD><td width='300'>     	 æ—…å›¢åç§°  </td></tr> <tr><TD   width='100'>说明</TD><td >     	 æ—…å›¢åç§°  </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='61' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-03   08:44:54 </div><table align='center' border='1' width='600'><caption >fdsafsa </caption><tr><TD width='100' >类型</TD><td width='300' >   </td><TD width='100'   >景点</TD><td width='300' >   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'>  </td><TD   width='100'>地点市</TD><td width='300'>      </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>        </td><TD  width='100' >开始时间</TD><td width='300'>       </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     342   </td><TD  width='100' >成员</TD><td width='300'>       </td></tr> <tr><TD   width='100'>说明</TD><td >       </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='60' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-03   08:39:46 </div><table align='center' border='1' width='600'><caption >level6 </caption><tr><TD width='100' >类型</TD><td width='300' >è°ƒè¯•   </td><TD width='100'   >景点</TD><td width='300' >   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'> é»‘é¾™æ±Ÿ </td><TD   width='100'>地点市</TD><td width='300'>      </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>        </td><TD  width='100' >开始时间</TD><td width='300'>       </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     3   </td><TD  width='100' >成员</TD><td width='300'>       </td></tr> <tr><TD   width='100'>说明</TD><td >       </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='59' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-03   00:50:15 </div><table align='center' border='1' width='600'><caption > </caption><tr><TD width='100' >类型</TD><td width='300' >234   </td><TD width='100'   >景点</TD><td width='300' >trewr   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'>  </td><TD   width='100'>地点市</TD><td width='300'>      </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>     ffwe   </td><TD  width='100' >开始时间</TD><td width='300'>     ewf  </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     4535   </td><TD  width='100' >成员</TD><td width='300'>       </td></tr> <tr><TD   width='100'>说明</TD><td >       </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='57' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div><div class='container' style='width: 800px'><div class='jumbotron'><div>发布者:happy &nbsp&nbsp 时间：2014-11-03   00:24:55 </div><table align='center' border='1' width='600'><caption >level6 </caption><tr><TD width='100' >类型</TD><td width='300' >åƒè´§   </td><TD width='100'   >景点</TD><td width='300' >é‡åº†æŸåœ°   </td></tr> <tr><TD   width='100'>地点省</TD><td width='300'> asdfsaf </td><TD   width='100'>地点市</TD><td width='300'>    111111111111  </td></tr> <tr><TD   width='100'>开始时间</TD><td width='300'>     æ”¾å‡äº†ã€‚   </td><TD  width='100' >开始时间</TD><td width='300'>     å¼€å­¦äº†  </td></tr> <tr><TD   width='100'>花费</TD><td width='300'>     0   </td><TD  width='100' >成员</TD><td width='300'>     lkl fzq ty  </td></tr> <tr><TD   width='100'>说明</TD><td >     å¯ä»¥æäº¤äº†  </td></tr></table><form  action='action.php?action=f2addtoteam' method='post'><input type='hidden' name='id'	value='47' /><input type='hidden' name='joinid'	value='1' /><input type='hidden' name='duser' 	 value='happy' /><div align='right'  width='500' ><button type='submit' name='submit' class='btn btn-primary' >将我加入</button></div></form></div></div>
+</div>
+</div>
 </div>
 </body>
 </html>
