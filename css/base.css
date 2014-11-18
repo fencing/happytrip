@@ -1,0 +1,2207 @@
+
+@font-face {
+    font-family: "proxima-nova";
+    src: url("http://breadtrip-static.u.qiniudn.com/static/new/fonts/proximanova-regular-webfont.eot");
+    src: local("proxima-nova Regular"),
+    local("proxima-nova"),
+    url("http://breadtrip-static.u.qiniudn.com/static/new/fonts/proximanova-regular-webfont.woff") format("woff"),
+    url("http://breadtrip-static.u.qiniudn.com/static/new/fonts/proximanova-regular-webfont.ttf") format("truetypr"),
+    url("http://breadtrip-static.u.qiniudn.com/static/new/fonts/proximanova-regular-webfont.svg#proxima-nova") format("svg");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "proxima-nova";
+    src: url("http://breadtrip-static.u.qiniudn.com/static/new/fonts/proximanova-bold-webfont.eot");
+    src: local("proxima-nova Bold"),
+    local("proxima-nova"),
+    url("http://breadtrip-static.u.qiniudn.com/static/new/fonts/proximanova-bold-webfont.woff") format("woff"),
+    url("http://breadtrip-static.u.qiniudn.com/static/new/fonts/proximanova-bold-webfont.ttf") format("truetypr"),
+    url("http://breadtrip-static.u.qiniudn.com/static/new/fonts/proximanova-bold-webfont.svg#proxima-nova") format("svg");
+    font-style: normal;
+    font-weight: 800;
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+html {
+    width: 100%;
+    height: 100%;
+    font-family: proxima-nova,Tahoma,Helvetica,"Hiragino Sans GB",sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    color: #222222;
+    background-color: #f7f7f7;
+    min-height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+body.w-930 {
+    background-color: #ffffff;
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+select,
+textarea,
+input[type="password"],
+input[type="text"] {
+    outline: none;
+}
+
+input[type="button"],
+input[type="submit"] {
+    outline: none;
+}
+
+a, a:link, a:visited {
+    color: #4abdcc;
+    text-decoration: none;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+a:hover, a:active {
+    color: #2e9dab;
+    text-decoration: none;
+}
+
+img {
+    color: transparent;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.display-table {
+    display: table;
+}
+
+.display-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.transparent {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.color-link {
+    color: #4abdcc;
+}
+
+.color-link-hover {
+    color: #2e9dab;
+}
+
+.color-text {
+    color: #5c5c5c;
+}
+
+.color-text-light {
+    color: #999999;
+}
+
+.fl,
+.float-left {
+    float: left;
+}
+
+.fr,
+.float-right {
+    float: right;
+}
+
+.cb,
+.clear-both {
+    clear: both;
+}
+
+.db,
+.display-block {
+    display: block;
+}
+
+.pr,
+.position-relative {
+    position: relative;
+}
+
+.pa,
+.position-absolute {
+    position: absolute;
+}
+
+.pf,
+.position-fixed {
+    position: fixed;
+}
+
+#overlay {
+    background: #000000;
+    height: 100%;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+.one-row-ellipsis {
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    overflow:hidden;
+}
+.text-error{
+    color: #fc5d7b;
+}
+/* IE fix
+img, div, ul.tabs, a, span {
+    behavior: url("http://breadtrip-static.u.qiniudn.com/static/new/css/iepngfix.htc");
+    behavior: url("http://breadtrip-static.u.qiniudn.com/static/new/css/ie-css3.htc");
+}
+*/
+
+/* 清除浮动  */
+.fn-clear:before,.fn-clear:after {
+    content: "";
+    display: table;
+}
+
+.fn-clear:after {
+    clear: both;
+}
+
+.fn-clear {
+    zoom: 1;
+}
+
+.ibfix {
+  font-size:0;/* 所有浏览器 */
+  *word-spacing:-1px;/* IE6、7 */
+}
+.ibfix .ibfix-c{
+  font-size: 12px;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align:top;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+  /* firefox 中 letter-spacing 会导致脱离普通流的元素水平位移 */
+  .ibfix{
+    letter-spacing:-5px;/* Safari 等不支持字体大小为 0 的浏览器, N 根据父级字体调节 */
+  }
+}
+.ibfix .ibfix-c {
+  display: inline-block;
+  *display:inline;
+  *zoom:1;
+}
+
+/* Header begin */
+#header {
+    background: #4abdcc;
+    font-family: proxima-nova,Tahoma,Helvetica,"Hiragino Sans GB",sans-serif;
+    height: 92px;
+    min-width: 960px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+body.w-930 #header {
+    min-width: 930px;
+}
+
+#header .top-bar {
+    background: #c3df21;
+    height: 4px;
+    overflow: hidden;
+    width: 100%;
+}
+
+#header .center-align {
+    position: relative;
+    margin: 0 auto;
+    width: 960px;
+}
+
+body.w-930 #header .center-align {
+    width: 930px;
+}
+
+#header .icon {
+    margin-top: 19px;
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/header.png") no-repeat scroll 0 0;
+    height: 50px;
+    width: 153px;
+}
+
+#header .icon a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#header .profile {
+    font-size: 16px;
+    margin-top: 28px;
+}
+
+#header .profile a {
+    color: #ffffff;
+    display: block;
+    font-size: 14px;
+    height: 100%;
+    text-decoration: none;
+    width: 100%;
+}
+
+#header .profile a:hover {
+    color: #2e9dab;
+}
+
+#header .profile .signup {
+    color: #ffffff;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 4px;
+    width: 32px;
+}
+
+#header .profile .text {
+    color: #ffffff;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 4px;
+    width: 20px;
+}
+
+#header .profile .sina-login {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/header.png") no-repeat scroll 0 -72px #ffffff;
+    color: #4abdcc;
+    cursor: pointer;
+    height: 25px;
+    line-height: 28px;
+    margin-left: 7px;
+    margin-top: 4px;
+    padding-left: 18px;
+    text-align: center;
+    width: 75px;
+}
+
+#header .profile .sina-login:hover {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/header.png") no-repeat scroll -93px -72px #c3df21;
+}
+
+#header .profile .sina-login a {
+    color: #4abdcc;
+}
+
+#header .profile .sina-login:hover a {
+    color: #2e9dab;
+    display: block;
+}
+
+#header .profile .login {
+    background: #ffffff;
+    color: #4abdcc;
+    cursor: pointer;
+    height: 25px;
+    line-height: 28px;
+    margin-left: 9px;
+    margin-top: 4px;
+    text-align: center;
+    width: 72px;
+}
+
+#header .profile .login a {
+    color: #4abdcc;
+}
+
+#header .profile .login a:hover {
+    /*background: #c3df21;
+    color: #2e9dab;
+    display: block;*/
+}
+
+#header .profile .avatar {
+    cursor: pointer;
+    height: 40px;
+    position: relative;
+    width: 53px;
+    z-index: 1000;
+}
+
+#header .profile .avatar a {
+    display: block;
+    height: 32px;
+    overflow: hidden;
+    width: 32px;
+}
+
+#header .profile .avatar .avatar-mask-32 {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/avatar_masks.png") no-repeat -65px -65px;
+    height: 32px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 32px;
+}
+
+#header .profile .avatar .down-arrow {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/header.png") -30px -140px;
+    height: 6px;
+    margin-top: 16px;
+    width: 9px;
+}
+
+#header .user-menu {
+    left: -23px;
+    position: absolute;
+    top: 32px;
+    width: 96px;
+}
+
+#header .user-menu .user-menu-item {
+    background: #2e9dab;
+    /*border-top: 1px solid #4abdcc;*/
+    border-bottom: 1px solid #ffffff;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    text-align: center;
+}
+
+#header .user-menu .user-menu-item a {
+    color: #ffffff;
+    display: block;
+    font-size: 14px;
+    width: 100%;
+}
+
+#header .user-menu .user-menu-item a:hover {
+    background: #bad424;
+}
+
+#header .profile .search {
+    margin: 4px 0 0 18px;
+    position: relative;
+    width: 148px;
+}
+
+#header .profile .search .text-wrapper {
+    background: #ffffff;
+    border: none;
+    height: 23px;
+    width: 143px;
+    padding: 2px 0 0 3px;
+}
+
+#header .profile .search .text-wrapper input {
+    border: 1px solid #ffffff;
+    font-size: 12px;
+    height: 15px;
+    width: 110px;
+}
+
+#header .profile .search .btn-wrapper {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/header.png") 0 -140px;
+    height: 17px;
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    width: 17px;
+}
+
+#header .profile .search .btn-wrapper input {
+    background: none;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    height: 17px;
+    padding: 0;
+    width: 17px;
+}
+
+#header .nav-bar {
+    margin: 38px 0 0 82px;
+}
+
+#header .nav-bar a {
+    color: #ffffff;
+    display: block;
+    float: left;
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 40px;
+    padding-bottom: 7px;
+    line-height: 16px;
+}
+
+#header .nav-bar a:hover {
+    border-bottom: 4px solid #c3df21;
+}
+
+#header .nav-bar a.selected {
+    border-bottom: 4px solid #c3df21;
+}
+
+#header .new-notifications {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/header.png") no-repeat -90px -140px;
+    height: 11px;
+    margin: 2px 0 0 5px;
+    width: 19px;
+}
+
+#header .user-menu-item .new-notifications {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/header.png") no-repeat -90px -140px;
+    height: 11px;
+    margin: 2px 0 0 5px;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    width: 19px;
+}
+/* Header end */
+
+/* New Header begin
+ *
+ * NOTE:
+ *  This part is only used for SOFT LAUNCH of USE_NEW_HEADER.
+ *  Should be deleted after HARD LAUNCH
+ */
+#header.new-header {
+    background: #168391;
+    color: #ffffff;
+    font-family: proxima-nova,Tahoma,Helvetica,"Hiragino Sans GB",sans-serif;
+    height: 60px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+#header.new-header .center-align {
+    position: relative;
+    margin: 0 auto;
+    width: 930px;
+}
+
+#header.new-header .icon {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/new_header_icons.png?v=20130509") no-repeat scroll 0 0;
+    height: 35px;
+    margin-top: 11px;
+    width: 110px;
+}
+
+#header.new-header .icon a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#header.new-header .profile {
+    font-size: 12px;
+    margin-top: 0px;
+}
+
+#header.new-header .profile a {
+    color: #ffffff;
+    display: block;
+    font-size: 12px;
+    height: 100%;
+    text-decoration: none;
+    width: 100%;
+}
+
+#header.new-header .profile .signup {
+    color: #ffffff;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 17px;
+    width: 32px;
+}
+
+#header.new-header .profile .signup a {
+    font-size: 14px;
+}
+
+#header.new-header .profile .signup a:hover {
+    color: #5acbda;
+}
+
+#header.new-header .profile .text {
+    color: #ffffff;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 17px;
+    width: 20px;
+}
+
+#header.new-header .profile .login {
+    background: #ffffff;
+    border-radius: 14px;
+    cursor: pointer;
+    height: 25px;
+    line-height: 28px;
+    margin-left: 9px;
+    margin-top: 18px;
+    text-align: center;
+    width: 100px;
+
+}
+
+#header.new-header .profile .login .a-login {
+    float: left;
+    width: 50px;
+    color: #168391;
+    font-size: 14px;
+    position: relative;
+}
+#header.new-header .profile .login .a-login:hover{
+    color: #55c1ce;
+}
+
+.a-login i{
+    position: absolute;
+    left: 48px;
+}
+
+#header.new-header .profile .login a:hover {
+    /*border-radius: 14px;
+    background: #c3df21;
+    display: block;*/
+}
+
+.login-sns{
+    float: left;
+    width: 50px;
+    line-height: 1;
+    height: 25px;
+    position: relative;
+    z-index: 5;
+}
+
+.login-sns:hover .login-sns-other,
+.hover .login-sns-other{
+    display: block;
+}
+
+.login-weibo{
+    text-indent: -9999em;
+    background: #fff url(http://breadtrip-static.u.qiniudn.com/static/img/login_sns_icon.png) no-repeat 10px -57px;
+    width: 17px;
+    height: 15px;
+    -webkit-border-top-right-radius: 14px;
+    -webkit-border-bottom-right-radius: 14px;
+    -moz-border-radius-topright: 14px;
+    -moz-border-radius-bottomright: 14px;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+.login-weibo:hover{
+    background-position: 10px -32px;
+}
+
+.login-weibo .down-arrow{
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/login_sns_icon.png") 0 0 no-repeat;
+    height: 6px;
+    margin-top: 0;
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    width: 9px;
+}
+.login-weibo:hover .down-arrow{
+    background-position: 0 -21px
+}
+.login-sns-other{
+    display: none;
+    background: #4abdcb;
+    border-radius: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 25px;
+    z-index: -1;
+}
+
+#header .profile .login .login-sns-other a{
+    display: block;
+    background-image: url(http://breadtrip-static.u.qiniudn.com/static/img/login_sns_icon.png);
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 50px;
+    text-indent: -9999em;
+}
+
+.login-sns-qq a{
+    /*background-position: 0 -204px;*/
+    background-position: 16px -198px;
+}
+.login-sns-qq a:hover{
+    background-position: 16px -226px;
+}
+.login-sns-tencent a{
+    background-position: 16px -136px;
+}
+.login-sns-tencent a:hover{
+    background-position: 16px -167px;
+}
+.login-sns-renren a{
+    background-position: 16px -80px;
+}
+.login-sns-renren a:hover{
+    background-position: 16px -108px;
+}
+
+#header.new-header .profile .avatar {
+    cursor: pointer;
+    height: 28px;
+    line-height: 28px;
+    min-width: 78px;
+    padding: 16px 11px 16px 13px;
+    position: relative;
+    width: auto;
+    z-index: 1000;
+}
+
+#header.new-header .profile .avatar:hover {
+    background: #bad424;
+}
+
+#header.new-header .profile .avatar a.photo {
+    display: block;
+    height: 28px;
+    overflow: hidden;
+    width: 28px;
+}
+
+#header.new-header .profile .avatar .photo img {
+    border-radius: 14px;
+    _width: 27px;
+}
+
+#header.new-header .profile .avatar .avatar-mask-28 {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/avatar_masks.png") no-repeat -65px 0;
+    height: 28px;
+    left: 13px;
+    position: absolute;
+    top: 16px;
+    width: 28px;
+}
+
+#header.new-header .profile .avatar:hover .avatar-mask-28 {
+    background-position: -65px -28px;
+}
+
+#header.new-header .profile .avatar .name {
+    padding: 0 17px 0 33px;
+}
+
+#header.new-header .profile .avatar .name a {
+    height: auto;
+    width: auto;
+}
+
+#header.new-header .profile .avatar .name a:hover {
+    color: #ffffff;
+}
+
+#header.new-header .profile .avatar .down-arrow {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/new_header_icons.png") 0 -160px no-repeat;
+    height: 6px;
+    margin-top: 0;
+    position: absolute;
+    right: 11px;
+    top: 27px;
+    width: 9px;
+}
+
+#header.new-header .user-menu {
+    left: 0px;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+}
+
+#header.new-header .user-menu .user-menu-item {
+    background: #2e9dab;
+    border-bottom: 1px solid #4abdcc;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 15px;
+    position: relative;
+    text-align: left;
+}
+
+#header.new-header .user-menu .user-menu-item:hover {
+    background: #4abdcc;
+}
+
+#header.new-header .user-menu .user-menu-item .menu-icon {
+    background: #ffffff;
+    height: 18px;
+    left: 15px;
+    position: absolute;
+    top: 8px;
+    width: 18px;
+}
+
+#header.new-header .user-menu .user-menu-item .create-trip-icon {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/new_header_icons.png") -169px -72px;
+}
+
+#header.new-header .user-menu .user-menu-item .notification-icon {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/new_header_icons.png") -91px -44px;
+}
+
+#header.new-header .user-menu .user-menu-item .message-icon {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/new_header_icons.png") -119px -44px;
+}
+
+#header.new-header .user-menu .user-menu-item .setting-icon {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/new_header_icons.png") -146px -44px;
+}
+
+#header.new-header .user-menu .user-menu-item .logout-icon {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/new_header_icons.png") no-repeat -171px -44px;
+}
+
+#header.new-header .user-menu .user-menu-item a {
+    color: #ffffff;
+    display: block;
+    font-size: 12px;
+    padding-left: 23px;
+    width: auto;
+}
+
+#header.new-header .user-menu .user-menu-item a:hover {
+    background: transparent;
+}
+
+#header.new-header .profile .search {
+    margin: 18px 14px 0 0;
+    position: relative;
+    width: 167px;
+}
+
+#header.new-header .profile .search .text-wrapper {
+    background: #ffffff;
+    border: none;
+    border-radius: 12px;
+    height: 24px;
+    width: 137px;
+    padding: 2px 0 0 30px;
+}
+
+#header.new-header .profile .search .text-wrapper input {
+    border: 1px solid #ffffff;
+    font-size: 12px;
+    height: 19px;
+    line-height: 19px;
+    width: 110px;
+}
+
+#header.new-header .profile .search .btn-wrapper {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/new_header_icons.png") -7px -136px;
+    _background: url("http://breadtrip-static.u.qiniudn.com/static/img/new_header_icons.png") -6px -136px;
+    height: 17px;
+    left: 10px;
+    position: absolute;
+    top: 4px;
+    width: 17px;
+}
+
+#header.new-header .profile .search .btn-wrapper input {
+    background: none;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    height: 17px;
+    padding: 0;
+    width: 17px;
+}
+
+#header.new-header .nav-bar {
+    margin: 0 0 0 50px;
+}
+
+#header.new-header .nav-bar a {
+    color: #ffffff;
+    display: block;
+    float: left;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 20px;
+    line-height: 20px;
+    margin: 0px;
+}
+
+#header.new-header .nav-bar a.selected {
+    color: #5acbda;
+    border-bottom: 0px solid transparent;
+}
+
+#header.new-header .nav-bar a:hover {
+    background: #4abdcc;
+    border-bottom: 0px solid transparent;
+    color: #ffffff;
+}
+
+#header.new-header .nav-bar .icon {
+    float: left;
+    height: 20px;
+    margin-top: 0px;
+    margin-right: 5px;
+    width: 20px;
+}
+
+#header.new-header .nav-bar a.selected .home-icon {
+    background-position: 0 -72px;
+}
+
+#header.new-header .nav-bar a.selected .explore-icon {
+    background-position: -29px -72px;
+}
+
+#header.new-header .nav-bar a.selected .destination-icon {
+    background-position: -62px -72px;
+}
+
+#header.new-header .nav-bar a:hover .home-icon,
+#header.new-header .nav-bar .home-icon {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/new_header_icons.png") no-repeat 0 -42px;
+}
+
+#header.new-header .nav-bar a:hover .explore-icon,
+#header.new-header .nav-bar .explore-icon {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/new_header_icons.png") no-repeat -29px -42px;
+}
+
+#header.new-header .nav-bar a:hover .destination-icon,
+#header.new-header .nav-bar .destination-icon {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/new_header_icons.png") no-repeat -62px -42px;
+}
+
+#header.new-header .new-count {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    _display: none;
+}
+
+#header.new-header .float-alarm {
+    background: #FFCB5B;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 12px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 29px 0 25px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    text-shadow: 1px 2px 0px #F3AD3F;
+    top: 60px;
+}
+
+#header.new-header .float-alarm a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#header.new-header .float-alarm a:hover {
+}
+
+#header.new-header .float-alarm a span {
+    width: 30px;
+}
+
+#header.new-header .float-alarm .close {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/new_header_icons.png") no-repeat -90px -75px;
+    cursor: pointer;
+    height: 14px;
+    position: absolute;
+    right: 4px;
+    top: 14px;
+    width: 14px;
+}
+
+.new-header #content {
+    padding-top: 60px;
+    padding-bottom: 270px;
+}
+/* New Header end */
+
+/* Content begin */
+#content {
+    position: relative;
+    padding: 92px 0 102px 0;
+    width: 100%;
+}
+
+#content .center-align {
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+}
+
+body.w-930 #content .center-align {
+    width: 930px;
+}
+
+#content .navigator {
+    height: 30px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+#content .navigator li {
+    cursor: pointer;
+    float: left;
+    height: 30px;
+}
+
+#content .navigator li.float-right {
+    float: right;
+}
+
+#content .navigator li,
+#content .navigator li a {
+    color: #ffffff;
+    display: block;
+    font-size: 14px;
+    height: 100%;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #5c5c5c;
+    width: 130px;
+    _line-height: 27px;
+}
+
+#content .navigator li a .num {
+    margin-left: 3px;
+}
+
+#content .navigator .nav-left {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/navigator_btn.png") 0 0;
+    _background: url("http://breadtrip-static.u.qiniudn.com/static/img/navigator_btn.png") -2px 0;
+    margin-left: -2px;
+    width: 130px;
+}
+
+#content .navigator .nav-left:hover {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/navigator_btn.png") 0 -30px;
+    _background: url("http://breadtrip-static.u.qiniudn.com/static/img/navigator_btn.png") -2px -30px;
+}
+
+#content .navigator .nav-left-active,
+#content .navigator .nav-left-active:hover {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/navigator_btn.png") 0 -60px;
+    _background: url("http://breadtrip-static.u.qiniudn.com/static/img/navigator_btn.png") -2px -60px;
+}
+
+#content .navigator .nav-middle {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/navigator_btn.png") -130px 0;
+    margin-left: -2px;
+    width: 130px;
+    _width:132px;
+}
+
+#content .navigator .nav-middle:hover {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/navigator_btn.png") -130px -30px;
+}
+
+#content .navigator .nav-middle-active,
+#content .navigator .nav-middle-active:hover {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/navigator_btn.png") -130px -60px;
+}
+
+#content .navigator .nav-right {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/navigator_btn.png") -260px 0;
+    margin-left: -2px;
+    width: 130px;
+}
+
+#content .navigator .nav-right:hover {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/navigator_btn.png") -260px -30px;
+}
+
+#content .navigator .nav-right-active,
+#content .navigator .nav-right-active:hover {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/navigator_btn.png") -260px -60px;
+}
+
+#content .navigator .nav-yellow {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/navigator_btn.png") -130px -90px;
+    width: 111px;
+}
+
+#content .navigator .nav-yellow:hover {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/navigator_btn.png") -130px -120px;
+}
+
+#content .navigator .nav-rose {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/navigator_btn.png") 0 -90px;
+    width: 111px;
+}
+
+#content .navigator .nav-rose:hover {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/navigator_btn.png") 0 -120px;
+}
+
+#content .new-navigator {
+    height: 32px;
+    margin: 20px 0 20px 0;
+    border-bottom: 2px solid #4abdcc;
+}
+
+#content .new-navigator a {
+    color: #999999;
+    display: block;
+    text-decoration: none;
+}
+
+#content .new-navigator .nav-item {
+    background: #e7e7e7;
+    color: #999999;
+    cursor: pointer;
+    float: left;
+    font-size: 14px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    width: 158px;
+    margin-right: 2px;
+}
+
+#content .new-navigator .active{
+    background: #4abdcc;
+    color: #ffffff;
+}
+
+#content .new-navigator .active a {
+    color: #ffffff;
+}
+
+#content .new-navigator .nav-item:hover {
+}
+
+#content .new-navigator .nav-left {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 159px;
+}
+
+#content .new-navigator .nav-middle {
+}
+
+#content .new-navigator .nav-right {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 159px;
+    margin-right: 0;
+}
+
+#content #left {
+    background: #ffffff;
+    float: left;
+    padding: 0 52px;
+    width: 566px;
+}
+
+body.w-930 #content #left {
+    padding: 0;
+    width: 640px;
+}
+
+#content #right {
+    float: right;
+    padding: 30px 0;
+    width: 260px;
+}
+
+body.w-930 #content #right {
+    padding: 22px 0;
+}
+
+#content #right .friend-invite {
+    background: #f2f2f2;
+    margin-top: 20px;
+}
+
+#content #right .friend-invite .title {
+    border-bottom: 1px solid #f7f7f7;
+    color: #5c5c5c;
+    font-size: 14px;
+    height: 41px;
+    line-height: 40px;
+    padding: 0 18px;
+}
+
+#content #right .friend-invite .description {
+    color: #999999;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 8px 60px 8px 18px;
+    position: relative;
+}
+
+#content #right .friend-invite .description .icon {
+    background: transparent url("http://breadtrip-static.u.qiniudn.com/static/img/rightside_icons.png?v=20140415") no-repeat;
+    height: 24px;
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    width: 24px;
+}
+
+#content .friend-invite .error-msg {
+    color: #fc5d7b;
+    font-size: 12px;
+    height: 18px;
+    padding-left: 18px;
+}
+
+#content .error-html-msg {
+    text-align: center;
+    margin-top: 50px;
+    color: #5c5c5c;
+}
+
+#content .friend-invite .info-msg {
+    color: #4abdcc;
+    font-size: 12px;
+    padding-left: 18px;
+    height: 18px;
+}
+
+#content .friend-invite .invite-form {
+    padding: 0 18px 10px 18px;
+}
+
+#content .friend-invite .text-wrapper {
+    background: #ffffff;
+    border: 1px solid #ffffff;;
+    height: 25px;
+    margin-bottom: 6px;
+    padding: 5px 5px 0 5px;
+    width: 213px;
+}
+
+#content .friend-invite .text-wrapper.invalid {
+    border: 1px solid #fc5d7b;
+}
+
+#content .friend-invite .text-wrapper input {
+    border: 0px solid;
+    font-size: 12px;
+    height: 18px;
+    width: 213px;
+}
+
+#content .friend-invite .add-more {
+    color: #4abdcc;
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 8px;
+    text-decoration: none;
+}
+
+#content .friend-invite .btn {
+    background: #4abdcc;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    height: 32px;
+    margin-top: 8px;
+    text-shadow: 1px 1px 1px #5c5c5c;
+    width: 96px;
+}
+
+#content .friend-invite .btn:hover {
+    background: #2e9dab;
+}
+
+#content #right .follow-sina-weibo{
+    background: #f2f2f2;
+    height: 72px;
+}
+
+#content #right .follow-sina-weibo p {
+    background: #f2f2f2 url("http://breadtrip-static.u.qiniudn.com/static/img/rightside_icons.png?v=20140415") 0 -30px no-repeat;
+    height: 72px;
+    width: 260px;
+    position: relative;
+}
+#content #right .follow-sina-weibo p .wb-btn{
+    position: absolute;
+    left: 160px;
+    top: 41px;
+}
+
+#content #right .clients {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/rightside_icons.png?v=20140415") 0 -180px no-repeat;
+    height: 172px;
+    margin-top: 20px;
+    position: relative;
+    width: 260px;
+}
+
+#content #right .clients a.downloads-link {
+    background: none;
+    height: 151px;
+    width: 260px;
+}
+
+#content #right .clients a {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/rightside_icons.png?v=20140415") no-repeat;
+    display: block;
+    height: 40px;
+    position: absolute;
+    width: 100px
+}
+
+#content #right .clients .ios {
+    background-position: -20px -360px;
+    left: 16px;
+    top: 119px;
+}
+
+#content #right .clients .android {
+    background-position: -140px -360px;
+    left: 136px;
+    top: 119px;
+}
+
+#content #right .clients .ios:hover {
+    background-position: -20px -410px;
+}
+
+#content #right .clients .android:hover {
+    background-position: -140px -410px;
+}
+
+#content #right .marketing-info {
+    margin-bottom: 20px;
+    height: 172px;
+    width: 260px;
+}
+
+/* Content end */
+
+/* Footer begin */
+.web-footer{
+    background: #4ABDCC;
+    min-width: 930px;
+    color: #168391;
+    padding: 30px 0 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
+.web-footer-map,
+.web-footer-copyright,
+.web-footer-coop{
+    width: 930px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.web-footer a,
+.web-footer a:visited{
+    color: #fff;
+}
+.web-footer a:hover{
+    color: #168391;
+}
+.web-footer-map{
+    margin-bottom: 10px;
+}
+.web-footer-logo{
+    float: left;
+    width: 172px;
+    height: 20px;
+    background: url(http://breadtrip-static.u.qiniudn.com/static/img/footer_img.png?v=140409) no-repeat;
+    background-position: 0 0;
+}
+.web-footer-link{
+    float: right;
+}
+.web-footer-link li{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    padding-left: 29px;
+    line-height: 15px;
+}
+.web-footer-link a{
+    font-size: 14px;
+    line-height: 14px;
+}
+.web-footer-copyright{
+    overflow: visible;
+}
+.web-footer-copyright p{
+    height: 10px;
+    line-height: 10px;
+}
+.web-footer-copyright p.web-footer-copyright-img{
+    width: 123px;
+    height: 8px;
+    line-height: 8px;
+    background: url(http://breadtrip-static.u.qiniudn.com/static/img/footer_img.png?v=140409) no-repeat;
+    background-position: 0 -21px;
+    margin-top: 3px;
+}
+.web-footer-beian{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background: url(http://breadtrip-static.u.qiniudn.com/static/img/footer_img.png?v=140409) no-repeat;
+    background-position: 0 -30px;
+    width: 99px;
+    height: 10px;
+    line-height: 10px;
+    margin-right: 8px;
+}
+.web-footer-beian:hover{
+    background-position: 0 -41px;
+}
+.web-footer-bei{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background: url(http://breadtrip-static.u.qiniudn.com/static/img/footer_img.png?v=140409) no-repeat;
+    background-position: 0 -88px;
+    width: 83px;
+    height: 10px;
+    line-height: 10px;
+    margin-right: 8px;
+}
+.web-footer-bei:hover{
+    background-position: 0 -99px;
+}
+.web-footer-gongan{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background: url(http://breadtrip-static.u.qiniudn.com/static/img/footer_img.png?v=140409) no-repeat;
+    background-position: 0 -52px;
+    width: 129px;
+    height: 10px;
+    line-height: 10px;
+}
+.web-footer-sns{
+    float: right;
+    *width: 145px;
+}
+.web-footer-sns li{
+    float: left;
+    line-height: 24px;
+    font-size: 12px;
+    padding-left: 5px;
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+.web-footer-sns li.web-footer-sns-title{
+    width: auto;
+    padding-right: 5px;
+}
+.web-footer-sns a{
+    display: block;
+    width: 24px;
+    height: 24px;
+    text-indent: -8964em;
+    background: url(http://breadtrip-static.u.qiniudn.com/static/img/footer_img.png?v=140409) no-repeat;
+}
+.web-footer-sns-weixin img{
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 15px;
+    top: 0;
+    opacity: 0;
+    z-index: 2;
+}
+.web-footer-sns-weixin a{
+    background-position: -150px -63px;
+}
+.web-footer-sns-weixin a:hover{
+    background-position: -175px -63px;
+}
+.web-footer-sns-weibo a{
+    background-position: 0 -63px;
+}
+.web-footer-sns-weibo a:hover{
+    background-position: -25px -63px;
+}
+.web-footer-sns-qq a{
+    background-position: -50px -63px;
+}
+.web-footer-sns-qq a:hover{
+    background-position: -75px -63px;
+}
+.web-footer-sns-douban a{
+    background-position: -100px -63px;
+}
+.web-footer-sns-douban a:hover{
+    background-position: -125px -63px;
+}
+.web-footer-coop{
+    border-top: 1px solid #2D9DAB;
+    margin-top: 25px;
+    padding-top: 10px;
+    font-size: 12px;
+}
+.web-footer-coop h3{
+    margin-bottom: 10px;
+}
+.web-footer-coop h3 span{
+    font-size: 9px;
+    margin-left: 8px;
+    -webkit-text-size-adjust: none; 
+}
+.web-footer-coop p{
+    margin-left: -19px;
+    margin-bottom: 10px;
+}
+.web-footer-coop p a{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin-left: 19px;
+    margin-bottom: 10px;
+    font-size: 11px;
+    -webkit-text-size-adjust: none; 
+}
+
+/* Footer end */
+
+/* -- style map popup -- */
+
+#overlayEffect {
+    display: none;
+    position: fixed;
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: -moz-linear-gradient(rgba(11,11,11,0.1), rgba(11,11,11,0.6)) repeat-x rgba(11,11,11,0.2);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(11,11,11,0.1)), to(rgba(11,11,11,0.6))) repeat-x rgba(11,11,11,0.2);
+    z-index: 1;
+}
+
+#popupContainer {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 700px;
+    height: 450px;
+    border: 8px solid #FFFFFF;
+    box-shadow: 0 1px 5px black;
+    background-color: #fff;
+    padding: 2px;
+    z-index: 2;
+}
+
+#map_popup {
+    width: 100%;
+    height: 100%;
+}
+
+.hidden { display: none; }
+
+#close {
+    background: url('http://breadtrip-static.u.qiniudn.com/static/img/close_popup.png') no-repeat center center;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    z-index: 3200;
+    position: absolute;
+    top: -22px;
+    right: -22px;
+}
+
+/* breadtrip trip common style */
+.bt-offset1 {margin-right: 20px}
+.bt-offset2 {margin-right: 40px}
+.bt-offset3 {margin-right: 60px}
+.bt-offset4 {margin-right: 80px}
+.bt-title {
+    border-bottom: 1px solid #eaeaea;
+    color: #5c5c5c;
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    padding-top: 13px;
+}
+
+.bt-btn {
+    border: none;
+    font-size: 15px;
+    background-color: #4abdcc;
+    cursor: pointer;
+    height: 28px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.bt-btn:hover {
+    background: #2e9dab;
+}
+
+.bt-input {
+    background-color: #eaeaea;
+    border: none;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 10px;
+}
+
+.ui-datepicker {
+    font-size: 12px;
+}
+
+#load-more,
+#loading-hint {
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    color: #999999;
+    cursor: pointer;
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    margin: 12px 0 30px 0;
+    text-align: center;
+    width: 640px;
+}
+
+/*************** New Right Column **************/
+.white {
+   background-color: #ffffff;
+}
+
+.gray {
+   background-color: #e7e7e7;
+}
+
+#content.trip-right-column #right .friend-invite {
+    margin: 0;
+    width: 260px;
+}
+
+#content.trip-right-column #right .friend-invite .title {
+    border: 0;
+    height: 43px;
+    line-height: 44px;
+}
+
+#content.trip-right-column #right .separator {
+    width: 225px;
+    height: 1px;
+    margin: 0 18px;
+    float: left;
+    font-size: 1px;
+    _margin-left: 8px;
+    _margin-right: 9px;
+}
+
+#content.trip-right-column #right .clients {
+    background: url("http://breadtrip-static.u.qiniudn.com/static/img/rightside_icons.png?v=20140415") no-repeat scroll 0 -472px transparent;
+    height: 151px;
+    margin: 0;
+    width: 260px;
+}
+.WB_follow_ex .status_following .follow_text,
+.WB_follow_ex .status_followed .follow_text{
+    line-height: normal;
+}
+
+#content.trip-right-column #right .clients .ios,
+#content.trip-right-column #right .clients .android {
+    top: 94px;
+}
+
+#content.trip-right-column #right .clients .ios:hover,
+#content.trip-right-column #right .clients .android:hover {
+    top: 94px;
+}
+
+#content.trip-right-column #right .follow-sina-weibo {
+    height: 93px;
+    width: 260px;
+}
+
+#content.trip-right-column #right .follow-sina-weibo p {
+    margin: 10px 0;
+}
+
+/* create trip popup */
+.new-trip-popup {
+    background: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0px 1px 8px #000000;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#5c5c5c', Direction=135, Strangth=3);
+    height: 320px;
+    padding: 0 18px;
+    text-align: center;
+    width: 324px;
+}
+
+.new-trip-popup .title {
+    border-bottom: 1px solid #e7e7e7;
+    color: #5c5c5c;
+    font-size: 14px;
+    line-height: 46px;
+    text-align: left;
+}
+
+.new-trip-popup .close {
+    background-image: url("http://breadtrip-static.u.qiniudn.com/static/img/user2013_icons.png?v=20130520");
+    background-repeat: no-repeat;
+    background-position: -140px -130px;
+    cursor: pointer;
+    height: 24px;
+    position: absolute;
+    right: 18px;
+    top: 11px;
+    width: 24px;
+}
+
+.new-trip-popup .close:hover {
+    background-position: -170px -130px;
+}
+
+.new-trip-popup .content {
+    padding-top: 18px;
+    text-align: left;
+}
+
+.new-trip-popup h4{
+    color: #999;
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.new-trip-popup .row{
+    margin-bottom: 20px;
+}
+
+.new-trip-popup .new-trip-name{
+    border: 1px solid #E7E7E7;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    padding: 0;
+}
+
+.new-trip-popup .content .prompt {
+    color: #000000;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.new-trip-popup .content .hint {
+    color: #999999;
+    font-size: 14px;
+}
+
+/*.new-trip-popup .buttons {
+    padding: 18px 0px;
+    display: inline-block;
+    _display: inline;
+}*/
+.new-trip-popup select{
+    -webkit-appearance: none;
+    height: 30px;
+    line-height: 30px;
+    width: 138px;
+    background: #fff;
+    border: 1px solid #E7E7E7;
+    padding-left: 10px;
+    color: #c9c9c9;
+    cursor: pointer;
+    background: url(http://breadtrip-static.u.qiniudn.com/static/img/create_trip_timezone_arrow.png) 117px 11px no-repeat;
+}
+.new-trip-popup .new-trip-confirm {
+    background: #4abdcc;
+    border-radius: 3px;
+    border-top: 0px solid #2e9dab;
+    border-left: 0px solid #2e9dab;
+    border-right: 0px solid #2e9dab;
+    border-bottom: 2px solid #2e9dab;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    height: 30px;
+    line-height: 34px;
+    margin-left: 13px;
+    text-align: center;
+    width: 110px;
+}
+
+.new-trip-popup .buttons .btn:first-child {
+    margin-left: 0px;
+}
+
+.new-trip-popup .buttons .btn:hover {
+    background: #2e9dab;
+}
+
+.new-trip-popup .error{
+    color: #fc6782;
+}
+
+#new-trip-popup .form-row {
+    font-size: 14px;
+    color: #5c5c5c;
+    line-height: 30px;
+    height: 30px;
+}
+
+#new-trip-popup .label {
+    padding-right: 10px;
+}
+
+#new-trip-popup .btn {
+    padding: 0px;
+    height: 32px;
+}
+.new-trip-popup-sns h3{
+    font-size: 12px;
+    color: #999;
+    position: relative;
+    height: 12px;
+    line-height: 1;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e7e7e7;
+}
+.new-trip-popup-sns h3 p{
+    position: absolute;
+    width: 150px;
+    text-align: center;
+    left: 50%;
+    top: 6px;
+    margin-left: -75px;
+    background: #fff;
+}
+.new-trip-popup-sns ul a{
+    display: block;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.new-trip-popup-sns ul li{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 100px;
+    height: 30px;
+    border-right: 1px solid #e7e7e7;
+}
+.new-trip-popup-sns ul i{
+    display: block;
+    width: 34px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: -7px;
+    background: url(http://breadtrip-static.u.qiniudn.com/static/img/by_sns_icons.png) no-repeat;
+}
+.new-trip-popup-sns ul li.new-trip-popup-tencent{
+    border-right: none;
+}
+.new-trip-popup-sns .new-trip-popup-sina i{
+    background-position: 0 2px;
+}
+.new-trip-popup-sns .new-trip-popup-instagram i{
+    background-position: 0 -59px;
+}
+.new-trip-popup-sns .new-trip-popup-tencent i{
+    background-position: 0 -124px;
+}
+.new-trip-popup-sns .new-trip-popup-sina a:hover i{
+    background-position: 0 -26px;
+}
+.new-trip-popup-sns .new-trip-popup-instagram a:hover i{
+    background-position: 0 -90px;
+}
+.new-trip-popup-sns .new-trip-popup-tencent a:hover i{
+    background-position: 0 -154px;
+}
+
+.login-popup{
+    width: 522px;
+    background: #fff;
+    position: relative;
+}
+.login-popup .header{
+    background: #4abdcb;
+    height: 40px;
+    line-height: 40px;
+}
+.login-popup h3{
+    padding-left: 18px;
+    color: #fff;
+}
+.login-popup .content{
+    font-size: 12px;
+    color: #999;
+    padding: 20px 0 20px 30px;
+}
+.login-popup-sns{
+    width: 210px;
+    background: url(http://breadtrip-static.u.qiniudn.com/static/img/login_popup_hr.png) right no-repeat;
+}
+.login-popup-sns-list{
+    text-align: left;
+    padding-top: 22px;
+}
+.login-popup-sns-list li{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 70px;
+    margin: 0 24px 22px 5px;
+}
+.login-popup-sns-list a{
+    display: block;
+    text-align: center;
+    padding-top: 40px;
+    background-image: url(http://breadtrip-static.u.qiniudn.com/static/img/login-popup.png);
+    background-repeat: no-repeat;
+    font-size: 14px;
+}
+.login-popup-sns-weibo a{
+    background-position: 17px -230px;
+}
+.login-popup-sns-weibo a:hover{
+    background-position: 17px -286px;
+}
+.login-popup-sns-qq a{
+    background-position: 17px -342px;
+}
+.login-popup-sns-qq a:hover{
+    background-position: 17px -400px;
+}
+.login-popup-sns-tencent a{
+    background-position: 17px -458px;
+}
+.login-popup-sns-tencent a:hover{
+    background-position: 17px -515px;
+}
+.login-popup-sns-renren a{
+    background-position: 17px -572px;
+}
+.login-popup-sns-renren a:hover{
+    background-position: 17px -627px;
+}
+.login-popup-other{
+    padding-left: 30px;
+}
+.login-popup h4 a{
+    float: right;
+}
+.login-popup-form{
+    width: 222px;
+}
+.login-popup-form h4{
+    margin-bottom: 14px;
+}
+.login-popup-form p{
+    margin: 12px 0;
+    overflow: hidden;
+}
+.login-popup-form p.error-msg{
+    color: #fc5d7a;
+}
+.login-popup-form .text input{
+    padding: 0;
+    margin: 0;
+    width: 220px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #ebebeb;
+    text-indent: 30px;
+    float: left;
+    background-image: url(http://breadtrip-static.u.qiniudn.com/static/img/login-popup.png);
+    background-repeat: no-repeat;
+}
+.login-popup-form .login-popup-name{
+    background-position: 8px -104px;
+}
+.login-popup-form .login-popup-pwd{
+    background-position: 8px -67px;
+}
+.login-popup-form .error input{
+    border: 1px solid #fc5d7a;
+}
+.login-popup-form .error .login-popup-name{
+    background-position: 8px -30px
+}
+.login-popup-form .error .login-popup-pwd{
+    background-position: 8px 7px
+}
+.login-popup-form .btn input{
+    background: #4abdcc;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    height: 32px;
+    text-shadow: 1px 1px 1px #5c5c5c;
+    text-align: center;
+    line-height: 32px;
+    padding: 0;
+    margin: 0;
+    width: 222px;
+}
+.login-popup-form .btn input:hover{
+    background: #2e9dab;
+}
+.login-popup .close{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #ffcb5b url(http://breadtrip-static.u.qiniudn.com/static/img/login-popup.png) 0 -145px no-repeat;
+}
+.login-popup .close:hover{
+    background-position: 0 -186px;
+}
+
+/* Connect & Config SNS popup begin*/
+#connect-sns-popup {
+    height: 630px;
+    width: 768px;
+}
+
+.connect-sns-popup-sina dt,
+.connect-sns-popup-sina2 dt{
+    background-position: 0 0;
+}
+.connect-sns-popup-tencent dt{
+    background-position: 0 -118px;
+}
+.connect-sns-popup-renren dt{
+    background-position: 0 -236px;
+}
+.config-sns-popup {
+    color: #999;
+    background: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0px 1px 8px #000000;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#5c5c5c', Direction=135, Strangth=3);
+    /*height: 190px;*/
+    padding: 0 18px;
+    text-align: center;
+    width: 324px;
+}
+
+.config-sns-popup .title {
+    border-bottom: 1px solid #e7e7e7;
+    color: #5c5c5c;
+    font-size: 14px;
+    line-height: 46px;
+    text-align: left;
+}
+
+.config-sns-popup .close {
+    background-image: url("http://breadtrip-static.u.qiniudn.com/static/img/user2013_icons.png?v=20130520");
+    background-repeat: no-repeat;
+    background-position: -140px -130px;
+    cursor: pointer;
+    height: 24px;
+    position: absolute;
+    right: 18px;
+    top: 11px;
+    width: 24px;
+}
+
+.config-sns-popup .close:hover {
+    background-position: -170px -130px;
+}
+
+.config-sns-popup .content {
+    padding-top: 7px;
+    text-align: center;
+}
+.config-sns-popup .info{
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 10px 0 15px;
+}
+
+.config-sns-popup .content .prompt {
+    color: #000000;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.config-sns-popup .content .hint {
+    color: #999999;
+    font-size: 14px;
+}
+
+.config-sns-popup .buttons {
+    padding: 18px 0px;
+    display: inline-block;
+    _display: inline;
+}
+
+.config-sns-popup .buttons .btn,
+.config-sns-popup .buttons .contect-sns-save {
+    background: #4abdcc;
+    border: none;
+    /*border-radius: 3px;
+    border-top: 0px solid #2e9dab;
+    border-left: 0px solid #2e9dab;
+    border-right: 0px solid #2e9dab;
+    border-bottom: 2px solid #2e9dab;*/
+    color: #ffffff;
+    cursor: pointer;
+    float: left;
+    font-size: 14px;
+    height: 30px;
+    margin-left: 16px;
+    text-align: center;
+    width: 110px;
+}
+
+.config-sns-popup .buttons .btn:first-child {
+    margin-left: 0px;
+}
+
+.config-sns-popup .buttons .btn:hover {
+    background: #2e9dab;
+}
+
+.config-sns-popup dl{
+    padding-left: 40px;
+}
+
+.config-sns-popup dt{
+    width: 58px;
+    height: 58px;
+    float: left;
+    background-image: url(http://breadtrip-static.u.qiniudn.com/static/img/settings_sns_icon.png);
+}
+
+.config-sns-popup dd{
+    text-align: left;
+    overflow: hidden;
+    padding-left: 14px;
+    font-size: 14px;
+}
+
+.config-sns-popup dd p{
+    line-height: 20px;
+    padding: 4px 0;
+}
+
+.config-sns-popup dd span{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 100px;
+    line-height: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.config-sns-popup span > input{
+    padding: 0;
+    margin: 0;
+    height: 20px;
+    width: 20px;
+    float: left;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+.config-sns-popup span > label{
+    line-height: 20px;
+    padding: 2px 0 3px 22px;
+    -moz-transition: color 1s ease;
+    -o-transition: color 1s ease;
+    -webkit-transition: color 1s ease;
+    transition: color 1s ease;
+}
+.config-sns-popup span:not(#ie8) > input[type=checkbox] + label {
+    background: url('http://breadtrip-static.u.qiniudn.com/static/img/settings_checkbox.png') 0 -21px no-repeat;
+    height: 20px;
+}
+.config-sns-popup span:not(#ie8) > input[type=checkbox]:checked + label{
+    background-position: 0 0px;
+}
+/* Connect SNS popup end */
