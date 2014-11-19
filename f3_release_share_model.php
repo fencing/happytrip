@@ -71,7 +71,7 @@
 	<TD align="right" >团队名称：</TD>
 	<td><input type="text" name="tripname"   ></td>
 	<TD align="right" >发布者：</TD>
-	<td><input type="text" name="duser"   ></td><!--       -->
+	<td><input type="text" name="postuser"   ></td><!--       -->
 </tr>
 <tr>
 	<td align="right" >省：</td>

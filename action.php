@@ -1,6 +1,7 @@
-<?php
+﻿<?php
 //这是一个信息增、删和改操作的处理页
 define("TO_NEWPAGE","Location:f2_release_trip.php");
+define("TO_NEWPAGE3","Location:f3_release_share.php");
  @session_start();
 ini_set('date.timezone','Asia/Shanghai');  
 //（1）、 导入配置文件
@@ -175,31 +176,31 @@ ini_set('date.timezone','Asia/Shanghai');
 				if($tripname!="")	{$sqlname = $sqlname."tripname='{$tripname}' ";}
 				else {$_mark=1;}
 				
-				if($kind!="")		{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname." kind='{$kind}'";}
+				if($kind!="")		{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname." kind='{$kind}'";$_mark=0;}
 				else {$_mark=1;}
 				
-				if($viewname!="")	{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  viewname='{$viewname}'";}
+				if($viewname!="")	{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  viewname='{$viewname}'";$_mark=0;}
 				else {$_mark=1;}
 				
-				if($place!="")		{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  place='{$place}'";}
+				if($place!="")		{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  place='{$place}'";$_mark=0;}
 				else {$_mark=1;}
-				if($placecity!="")	{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  placecity= '{$placecity}'";}
+				if($placecity!="")	{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  placecity= '{$placecity}'";$_mark=0;}
 				else {$_mark=1;}
 				
-				if($timestart!="")	{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  timestart='{$timestart}'";}
+				if($timestart!="")	{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  timestart='{$timestart}'";$_mark=0;}
 				else {$_mark=1;}
-				if($timeend!="")	{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  timeend= '{$timeend}'";}
+				if($timeend!="")	{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  timeend= '{$timeend}'";$_mark=0;}
 				else {$_mark=1;}
 
-				if($timestart!="")	{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  timestart='{$timestart}'";}
+				if($timestart!="")	{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  timestart='{$timestart}'";$_mark=0;}
 				else {$_mark=1;}
-				if($timeend!="")	{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  timeend= '{$timeend}'";}
+				if($timeend!="")	{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  timeend= '{$timeend}'";$_mark=0;}
 				else {$_mark=1;}
 				
-				if($cost!="")		{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  cost={$cost}";}
+				if($cost!="")		{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  cost={$cost}";$_mark=0;}
 				else {$_mark=1;}
 				if($member!="")		{if($_mark==0) $sqlname = $sqlname." and ";$sqlname = $sqlname."  member='{$member}'";}
-				else {$_mark=1;}
+				//else {$_mark=1;}
 				$_SESSION["search"]=0;
 					if($sqlname==""){$_SESSION["search"]=0;header(TO_NEWPAGE);		}	
 					else{$_SESSION["search"]=1;}					
@@ -230,17 +231,112 @@ ini_set('date.timezone','Asia/Shanghai');
 			echo $id ;
 			echo "\n" ;
 			echo $joinid ;
+			
+			
+			$sql="update member set tour=CONCAT(tour,',{$id}') where id={$joinid}";
+			$retval = mysql_query($sql,$link);
+
+			
 			$sql="update travel set mnum=mnum+1,mlist=CONCAT(mlist,',{$joinid}') where id={$id}";
 			$retval = mysql_query($sql,$link);
-			$id = mysql_insert_id($link);
+
 			
+
 			
-			
-			
+
 			break;	
 			
-			
-			case "f3": 
+			case "f3":
+	$tripname = $_POST["tripname"];
+	$province = $_POST["province"];
+	$city = $_POST["city"];
+	$place = $_POST["place"];
+	$type = $_POST["type"];
+	$content = $_POST["content"];
+	$addtime = time();
+	$postid = $_POST["did"];
+	$postuser = $_POST["duser"];
+	echo "<td>发布时间:".date("Y-m-d   H:i:s ",$time)."&nbsp &nbsp</td>";
+	
+	$sql = 	"INSERT INTO share ".
+		"(id, tripname, province, city, place, type, content, time, postid, postuser)".
+		"VALUES ".
+		"(null,'{$tripname}','{$province}','{$city}','{$place}','{$type}',".
+		"'${content}',{$addtime},{$postid},'{postuser}')";
+	mysql_query($sql,$link);
+	
+	$id = $id = mysql_insert_id($link);
+	if($id>0){
+		header(TO_NEWPAGE3);
+		echo "<h3>add  new share suc ！</h3>";
+		echo "<a href='homepage.php'>返回主页</a>";
+	}else{
+		if($postid=="")
+		{echo "未登录";}
+		echo "<h3>添加失败！</h3>";
+		echo "<a href='javascript:window.history.back();'>返回</a>&nbsp;&nbsp;";
+	}
+	break;
+
+case "fs3":
+	$postuser = $_POST["postuser"];
+	$tripname = $_POST["tripname"];
+	$province = $_POST["province"];
+	$city = $_POST["city"];
+	$place = $_POST["place"];
+	$type = $_POST["type"];
+	$_mark=0;$sqlname="";
+	if($postuser!=""){$sqlname = $sqlname."postuser='{$postuser}' ";}
+	else {$_mark=1;}
+	if($tripname!=""){
+		if($_mark==0)	$sqlname = $sqlname." and ";
+		$sqlname = $sqlname." tripname='{$tripname}'";
+		$_mark=0;
+	}else {$_mark=1;}
+	if($province!=""){
+		if($_mark==0)	$sqlname = $sqlname." and ";
+		$sqlname = $sqlname." province='{$province}'";
+		$_mark=0;
+	}else {$_mark=1;}
+	if($city!=""){
+		if($_mark==0)	$sqlname = $sqlname." and ";
+		$sqlname = $sqlname." city='{$city}'";
+		$_mark=0;
+	}else {$_mark=1;}
+	if($place!=""){
+		if($_mark==0)	$sqlname = $sqlname." and ";
+		$sqlname = $sqlname." place='{$place}'";
+		$_mark=0;
+	}else {$_mark=1;}
+	if($type!=""){
+		if($_mark==0)	$sqlname = $sqlname." and ";
+		$sqlname = $sqlname." type='{$type}'";
+		$_mark=0;
+	}else {$_mark=1;}
+	$_SESSION["search"]=0;
+	if($sqlname==""){$_SESSION["search"]=0;header(TO_NEWPAGE3);		}	
+	else{$_SESSION["search"]=1;}					
+	$sql = "select * from share where  ".$sqlname;
+	$_SESSION["sqlsearch"]=$sql;
+	$_SESSION['keyword']=$sqlname;
+	echo $sql;
+	$retval = mysql_query($sql,$link);
+	$row = mysql_fetch_assoc($retval);
+	if( mysql_num_rows($retval) ){
+		header(TO_NEWPAGE3);
+		echo "<h3>Search SHARE Success ！</h3>";
+
+		echo "<a href='homepage.php'>返回主页</a>";
+
+	}else{
+		echo "<h3>search失败！</h3>";
+		echo "<a href='javascript:window.history.back();'>返回</a>&nbsp;&nbsp;";
+	}
+	break;
+
+	
+	
+			/*case "f3": 
 				$topic 	= $_POST["topic"];
 				$context		= $_POST["context"];
 				$addtime 	= time();
@@ -267,7 +363,7 @@ ini_set('date.timezone','Asia/Shanghai');
 					echo "<a href='javascript:window.history.back();'>返回</a>&nbsp;&nbsp;";
 				}
 
-			break;
+			break;*/
 			
 			
 			
