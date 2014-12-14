@@ -1,7 +1,7 @@
 
 <!Doctype html>
 <html class="nx-main760">
-<head>
+<head> 
 <meta name="Description" content="" />
 <meta name="Keywords" content="" />
 <title>HappyTrip</title><meta charset="utf-8"/>
