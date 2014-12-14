@@ -7,7 +7,7 @@
 						$st	="<div class='container' style='width: 800px'>".
 							"<div class='jumbotron'>".
 							"<div>发布者:{duser} &nbsp&nbsp 时间：{addtime}</div>".
-							"<table align='center' border='1' width='600'>".
+				 			"<table align='center' border='1' width='600'>".
 							"<caption >{tripname} </caption>".
 							"<tr>".
 							"<TD width='100' >类型</TD>".
