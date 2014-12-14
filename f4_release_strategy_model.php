@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<script  src="js/bootstrap.min.js"></script>    
+<script  src="js/bootstrap.min.js"></script>     
 <div id="container" >
 <div id="header" ><h1 >kelikeli,快乐旅行^_^</h1></div>
 <div class="left" > {REPLACE_menu} </div>
