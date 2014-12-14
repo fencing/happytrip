@@ -3,6 +3,7 @@
 <li>前端：html、css、js、bootstrap</li>
 <li>后台：php</li>
 <li>数据库：mysql</li>
+<li>架构：ThinkPHP</li>
 </ul>
 分8个模块
 1旅游景点
