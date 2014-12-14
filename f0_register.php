@@ -14,6 +14,9 @@
 </head>
 <body class="mioji_index">
 
+
+
+
 	
 <div class="mji_bgAni">
     <img class="city1" src="resource/images/index/city_1.png">
