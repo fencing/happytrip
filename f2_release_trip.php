@@ -15,7 +15,7 @@
 							"<TD width='100'   >景点</TD>".
 							"<td width='300' >{viewname}   </td>".
 							"</tr> ".
-							"<tr>".
+							"<tr>". 
 		"<TD   width='100'>地点省</TD>".
 			"<td width='300'> {place} </td>".
 	"<TD   width='100'>地点市</TD>".
