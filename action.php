@@ -6,8 +6,6 @@ ini_set('date.timezone','Asia/Shanghai');
 //（1）、 导入配置文件
 	require("dbconfig.php");
 	
-	
-	
 //（2）、连接MySQL、并选择数据库
 	$link = @mysql_connect(HOST,USER,PASS) or die("数据库连接失败！");
 	mysql_select_db(DBNAME,$link);
@@ -227,18 +225,52 @@ ini_set('date.timezone','Asia/Shanghai');
 
 			break;			
 			case "f2addtoteam": 
-			$id 	= $_POST["id"];
-			$joinid = $_POST["joinid"];
-			echo $id ;
-			echo "\n" ;
-			echo $joinid ;
-			$sql="update travel set mnum=mnum+1,mlist=CONCAT(mlist,',{$joinid}') where id={$id}";
-			$retval = mysql_query($sql,$link);
-			$id = mysql_insert_id($link);
+				$id 	= $_POST["id"];
+				$joinid = $_POST["joinid"];
+				echo $id ;
+				echo "\n" ;
+				echo $joinid ;
 			
 			
+				$sql="update member set tournum=tournum+1,tour=CONCAT(tour,',{$id}') where id={$joinid}";
+				$retval = mysql_query($sql,$link);
+
+			
+				$sql="update travel set mnum=mnum+1,mlist=CONCAT(mlist,',{$joinid}') where id={$id}";
+				$retval = mysql_query($sql,$link);
+
+				header("Location:f8_trip_group.php");
+			break;	
 			
 			
+			case "f2deletefromteam": 
+				$id 	= $_POST["id"];
+				$joinid = $_POST["joinid"];
+				echo $id ;
+				echo "\n" ;
+				echo $joinid ;
+			
+
+				$sql="select tour from  member where id={$joinid}";
+				$result = mysql_query($sql,$link);
+				$row = mysql_fetch_assoc($result);
+				$tour=$row['tour'];
+				$tour=str_replace(",{$id}","",$tour);
+				$sql="update member set tournum=tournum-1,tour='{$tour}' where id={$joinid}";
+				$result = mysql_query($sql,$link);
+				
+
+				
+				$sql="select mlist from  travel where id={$id}";
+				$result = mysql_query($sql,$link);
+				$row = mysql_fetch_assoc($result);
+				$mlist=$row['mlist'];
+				$mlist=str_replace(",{$joinid}","",$mlist);
+				$sql="update travel set mnum=mnum-1,mlist='{$mlist}' where id={$id}";
+				$result = mysql_query($sql,$link);
+				
+				header("Location:f8_trip_group.php");
+
 			break;	
 			
 			
