@@ -4,7 +4,7 @@
 						define("F_NEWPAGE","f2_release_trip.html");
 						define("F_MENU","menu.php");
 						define("TO_NEWPAGE","Location:f2_release_trip.html");
-						$st	="<div class='container' style='width: 800px'>".
+					 	$st	="<div class='container' style='width: 800px'>".
 							"<div class='jumbotron'>".
 							"<div>发布者:{duser} &nbsp&nbsp 时间：{addtime}</div>".
 							"<table align='center' border='1' width='600'>".
