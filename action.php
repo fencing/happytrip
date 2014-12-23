@@ -7,6 +7,7 @@ ini_set('date.timezone','Asia/Shanghai');
 	require("dbconfig.php");
 	
 //（2）、连接MySQL、并选择数据库
+
 	$link = @mysql_connect(HOST,USER,PASS) or die("数据库连接失败！");
 	mysql_select_db(DBNAME,$link);
 	
