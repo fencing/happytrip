@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
     <meta content="text/html;charset=GKB" http-equiv="content-type">
     <title>快乐旅行 - 我们用智能重新定义旅行!</title>
     <meta name="keywords" content="快乐,快乐旅行,自由行,行程助手">
