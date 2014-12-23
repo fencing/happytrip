@@ -6,7 +6,7 @@
     <meta name="keywords" content="快乐,快乐旅行,自由行,行程助手">
     <meta name="description" content="快乐旅行，一键规划专属于你的自由行行程方案。交通，住宿，景点，美食一网打尽，不用再手动订机票，订酒店，查路线，比价，快乐旅行一键帮您搞定。">
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-	 
+	  
     <link type="text/css" rel="stylesheet" href="resource/css/mioji.css" />
     <link type="text/css" rel="stylesheet" href="resource/css/mioji_index.css" />
 
