@@ -13,7 +13,7 @@
    <script src="/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 if(typeof nx === 'undefined'){
-var nx = {};
+var nx = {}; 
 }
 nx.log = {
 startTime : + new Date()
