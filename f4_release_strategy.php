@@ -5,7 +5,7 @@
 						define("F_MENU","menu.php");
 						define("TO_NEWPAGE","Location:f4_release_strategy.html");
 						$st	="<div class='container' style='width: 800px'>".
-							"<div class='jumbotron'>".
+		 					"<div class='jumbotron'>".
 							"<div>发布者:{duser} &nbsp&nbsp 时间：{addtime}</div>".
 				 			"<table align='center' border='1' width='600'>".
 							"<caption >{tripname} </caption>".
@@ -15,7 +15,7 @@
 							"<TD width='100' >景点</TD>".
 							"<td width='300' >{viewname}</td>".
 							"</tr> ".
-							"<tr>".
+							"<tr>".      
 		"<TD   width='100'>地点省</TD>".
 			"<td width='300'> {place} </td>".
 	"<TD   width='100'>地点市</TD>".
