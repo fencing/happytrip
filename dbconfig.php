@@ -1,7 +1,7 @@
 <?php
 //公共信息配置
 
-
+ 
 
 //数据库配置信息
 define("HOST","localhost");	//主机名
